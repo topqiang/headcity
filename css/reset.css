@@ -1,0 +1,1103 @@
+@charset "utf-8";
+body {
+  background: #f6f6f6;
+}
+.content {
+  background: #f6f6f6;
+  margin-bottom: 50px;
+}
+.textcen {
+  text-align: center;
+}
+.pore {
+  position: relative;
+}
+.poab {
+  position: absolute;
+}
+.bgz {
+  background: #f9d726;
+}
+.colz {
+  color: #f9d726;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.bgza {
+  background: rgba(249, 215, 38, 0.8);
+}
+.bgb {
+  background: #fff !important;
+}
+.bgf {
+  background: #f2f2f2;
+}
+.colb {
+  color: #FFFFFF;
+}
+.cole {
+  color: #767676;
+}
+.mat10 {
+  margin-top: 10px !important;
+}
+.texovh {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.disf {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+.colf {
+  color: #f3cc00;
+}
+.colg {
+  color: #42bdcc;
+}
+.disn {
+  display: none;
+}
+.ovhid {
+  overflow: hidden;
+}
+.textrig {
+  text-align: right;
+}
+.mar60 {
+  margin-right: 60px;
+}
+.borbtn {
+  padding: 5px 20px;
+  border-radius: 4px;
+  border: 1px solid #f9d726;
+}
+.botarea {
+  height: 50px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+header {
+  position: fixed;
+  top: 0px;
+  z-index: 8;
+  width: 100%;
+  color: #FFFFFF;
+}
+header span.local {
+  padding: 25px;
+  height: 50px;
+  line-height: 50px;
+  background: url('../img/msg.png') 10px center no-repeat;
+  background-size: 24px 24px;
+}
+header .sousuo {
+  width: 70%;
+  height: 30px;
+  line-height: 30px;
+  margin: 10px 15%;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.5);
+}
+header div.left {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 36px;
+  background: url('../img/left.png') 13px center no-repeat;
+  background-size: 10px 20px;
+}
+.label {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+footer {
+  background: #fff;
+  height: 60px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  border-top: 1px solid #D8D8D8;
+}
+footer > div {
+  width: 25%;
+  padding-top: 40px;
+}
+footer > div.on {
+  color: #f9d726;
+}
+footer > div:nth-child(1) {
+  background: url('../img/fter1.png') center 10px no-repeat;
+  background-size: auto 30px;
+}
+footer > div:nth-child(1).on {
+  background: url('../img/fter1on.png') center 10px no-repeat;
+  background-size: auto 30px;
+}
+footer > div:nth-child(2) {
+  background: url('../img/fter2.png') center 10px no-repeat;
+  background-size: auto 30px;
+}
+footer > div:nth-child(2).on {
+  background: url('../img/fter2on.png') center 10px no-repeat;
+  background-size: auto 30px;
+}
+footer > div:nth-child(3) {
+  background: url('../img/fter3.png') center 10px no-repeat;
+  background-size: auto 30px;
+}
+footer > div:nth-child(3).on {
+  background: url('../img/fter3on.png') center 10px no-repeat;
+  background-size: auto 30px;
+}
+footer > div:nth-child(4) {
+  background: url('../img/fter4.png') center 10px no-repeat;
+  background-size: auto 30px;
+}
+footer > div:nth-child(4).on {
+  background: url('../img/fter4on.png') center 10px no-repeat;
+  background-size: auto 30px;
+}
+footer > div span {
+  font-size: 10px;
+  display: block;
+  text-align: center;
+}
+.zhao {
+  position: fixed;
+  z-index: 9;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.zhcon {
+  bottom: 50px;
+  background: #fff !important;
+  width: 100%;
+}
+.zhcon .gootitle {
+  height: 30px;
+  line-height: 30px;
+  background: url('../img/yline.png') 0px center no-repeat;
+  background-size: 4px 30px;
+}
+.alrelist {
+  background: url('../img/zhaobg.png') 0px 0px no-repeat;
+  background-size: 100% 100%;
+  padding: 10px 0px;
+}
+.alrelist li {
+  padding: 10px 10px;
+}
+.alrelist li > div {
+  padding-left: 20px;
+}
+.alrelist li > div .playgley {
+  margin-top: 0px;
+}
+.gley {
+  height: 50px;
+  line-height: 50px;
+  position: fixed;
+  bottom: 0px;
+  z-index: 10;
+  width: 100%;
+  color: #dadada;
+  padding-left: 20px;
+  background: #fff !important;
+}
+.gley .stopmsg {
+  display: none;
+}
+.gley .gleybtn {
+  float: right;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 0px 25px;
+  background: #f9d726;
+}
+.gley.stop .stopmsg {
+  display: inline-block;
+}
+.gley.stop .gleycon {
+  display: none;
+}
+.gley.stop .gleybtn {
+  background: #dadada;
+}
+.ingley {
+  padding: 25px 20px;
+  background: url('../img/gleyon.png') 0px center no-repeat;
+  background-size: 30px 30px;
+}
+.ingley .subnum {
+  top: 20px;
+  left: 23px;
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  background: #f9d726;
+  color: #FFFFFF;
+  font-size: 6px;
+  text-align: center;
+  border-radius: 5px;
+}
+.smbtn {
+  padding: 2px 5px;
+  color: #FFFFFF;
+  background: #f9d726;
+  border-radius: 5px;
+}
+.leftitle {
+  display: inline-block;
+  width: 100px;
+}
+.lmbtn {
+  padding: 5px 20px;
+  color: #FFFFFF;
+  background: #f9d726;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.bge {
+  background: #E1E1E1 !important;
+}
+.bgea {
+  background: rgba(225, 225, 225, 0.5);
+}
+.gleycon {
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  right: 0px;
+  color: #767676;
+}
+.gleycon font {
+  font-size: 18px;
+  color: #f9d726;
+}
+.icongley {
+  background: url('../img/gley.png') 0px center no-repeat;
+  background-size: 50px 50px;
+}
+.iconjian {
+  background: url('../img/jiannum.png') center center no-repeat;
+  background-size: 20px 20px;
+}
+.iconzan {
+  padding-left: 25px;
+  background: url('../img/zan.png') 0px center no-repeat;
+  background-size: 20px 20px;
+}
+.iconsousuo {
+  padding-left: 30px;
+  background: url('../img/sousuo.png') 0px center no-repeat;
+  background-size: 20px 20px;
+}
+.iconpche {
+  padding-left: 30px;
+  background: url('../img/pche.png') left center no-repeat;
+  background-size: 30px 30px;
+}
+.iconsanj {
+  background: url('../img/sanj.png') right center no-repeat;
+  background-size: 5px 5px;
+}
+.iconsanj.on {
+  background: url('../img/sanjon.png') right center no-repeat;
+  background-size: 5px 5px;
+}
+.iconadd {
+  background: url('../img/add.png') center center no-repeat;
+  background-size: 20px 20px;
+}
+.phone {
+  background: url('../img/phone.png') 10px center no-repeat;
+  background-size: 25px 30px;
+}
+.code {
+  background: url('../img/code.png') 10px center no-repeat;
+  background-size: 25px 30px;
+}
+.iconkefu {
+  padding-left: 35px;
+  background: url('../img/kefu.png') 0px center no-repeat;
+  background-size: 25px 25px;
+}
+.iconemail {
+  background: url('../img/email.png') 10px center no-repeat;
+  background-size: 25px 30px;
+}
+.iconys {
+  background: url('../img/ys.png') 10px center no-repeat;
+  background-size: 25px 30px;
+}
+.iconcode {
+  background: url('../img/codeh.png') 10px center no-repeat;
+  background-size: 25px 30px;
+}
+.unlock {
+  background: url('../img/unlock.png') 10px center no-repeat;
+  background-size: 25px 30px;
+}
+.iconcoupon {
+  background: url('../img/coupon.png') 10px center no-repeat;
+  background-size: 25px 25px;
+}
+.iconmoney {
+  background: url('../img/money.png') 10px center no-repeat;
+  background-size: 25px 30px;
+}
+.icontix {
+  background: url('../img/tix.png') 10px center no-repeat;
+  background-size: 25px 25px;
+}
+.iconchz {
+  background: url('../img/chz.png') 10px center no-repeat;
+  background-size: 25px 25px;
+}
+.iconaddre {
+  background: url('../img/addre.png') 10px center no-repeat;
+  background-size: 20px 20px;
+}
+.iconaddr {
+  padding-right: 15px;
+  background: url('../img/addre.png') right center no-repeat;
+  background-size: 15px 15px;
+}
+.icontel {
+  background: url('../img/tel.png') 10px center no-repeat;
+  background-size: 20px 20px;
+}
+.icontelr {
+  display: inline-block;
+  padding-right: 15px;
+  background: url('../img/tel.png') right center no-repeat;
+  background-size: 15px 15px;
+}
+.iconedi {
+  background: url('../img/edit.png') 10px center no-repeat;
+  background-size: 20px 20px;
+}
+.icondel {
+  background: url('../img/del.png') 10px center no-repeat;
+  background-size: 20px 20px;
+}
+.iconwifi {
+  background: url('../img/wifi.png') 0px center no-repeat;
+  background-size: 20px 20px;
+}
+.iconsann {
+  background: url('../img/sann.png') 0px center no-repeat;
+  background-size: 20px 20px;
+}
+.iconpadd {
+  background: url('../img/padd.png') 0px center no-repeat;
+  background-size: 20px 20px;
+}
+.iconcuif {
+  background: url('../img/cuif.png') 0px center no-repeat;
+  background-size: 20px 20px;
+}
+.iconaddress {
+  background: url('../img/address.png') 0px center no-repeat;
+  background-size: 15px 15px;
+}
+.iconwx {
+  background: url('../img/wx.png') 0px center no-repeat;
+  background-size: auto 30px;
+}
+.iconzfb {
+  background: url('../img/zfb.png') 0px center no-repeat;
+  background-size: auto 30px;
+}
+.iconye {
+  background: url('../img/ye.png') 0px center no-repeat;
+  background-size: auto 30px;
+}
+.iconkeep {
+  background: url('../img/keep.png') 10px center no-repeat;
+  background-size: 25px 30px;
+}
+.right {
+  padding: 25px 15px;
+  background: url('../img/right.png') 0px center no-repeat;
+  background-size: 10px 20px;
+}
+.iconlu {
+  background: url('../img/iconlu.png') 0px center no-repeat;
+  background-size: 8px 8px;
+}
+.check {
+  background: url('../img/check.png') 20px center no-repeat;
+  background-size: 20px 20px;
+}
+.check.on {
+  background: url('../img/checkon.png') 20px center no-repeat;
+  background-size: 20px 20px;
+}
+.getcode {
+  margin-top: 10px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0px 10px;
+  float: right;
+  color: #FFFFFF;
+  text-align: center;
+  background: #f9d726;
+  border-radius: 4px;
+}
+.big-btn {
+  margin-top: 50px;
+  font-size: 18px;
+  width: 90%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-left: 5%;
+  border-radius: 4px;
+}
+.line {
+  padding: 0px 5px;
+  margin-top: 20px;
+  background: #fff !important;
+}
+.line input {
+  width: auto;
+}
+.line > div {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #d8d8d8;
+  padding-left: 40px;
+}
+.line > div:last-child {
+  border-bottom: 0px;
+}
+.shopline {
+  font-size: 12px;
+  margin-top: 10px;
+  background: #fff !important;
+}
+.shopline > div {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 2px dotted #d8d8d8;
+  padding-left: 40px;
+}
+.shopline > div:last-child {
+  border-bottom: 0px;
+}
+.orderline {
+  margin-top: 10px;
+  background: #fff !important;
+}
+.orderline > div {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #d8d8d8;
+  padding-left: 20px;
+}
+.orderline > div:last-child {
+  border-bottom: 0px;
+}
+.lined {
+  padding: 0px 20px;
+  margin-top: 0px;
+  background: #fff !important;
+}
+.lined > div {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 2px dotted #d8d8d8;
+  padding-left: 20px;
+}
+.lined > div:last-child {
+  border-bottom: 0px;
+}
+.formline {
+  margin-top: 0px;
+  background: #fff !important;
+}
+.formline > div {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #d8d8d8;
+  padding-left: 10px;
+}
+.formline > div:last-child {
+  border-bottom: 0px;
+}
+.lines {
+  padding: 0px 20px;
+  margin-top: 0px;
+  background: #fff !important;
+}
+.lines > div {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #d8d8d8;
+  padding-left: 0px;
+}
+.lines > div:last-child {
+  border-bottom: 0px;
+}
+.line0d {
+  padding: 0px 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background: #fff !important;
+}
+.line0d > div {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 2px dotted #d8d8d8;
+  padding-left: 0px;
+}
+.line0d > div:last-child {
+  border-bottom: 0px;
+}
+.labtitle {
+  height: 50px;
+  line-height: 50px;
+  margin-left: 20px;
+}
+.focus1 {
+  background: rgba(0, 0, 0, 0) !important;
+}
+.focus1 > div {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.focus1 span {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.focus1 span.current {
+  background: #fff !important;
+}
+.xqnav {
+  padding-bottom: 10px;
+  color: #666666;
+  font-size: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  background: #fff !important;
+}
+.xqnav > div {
+  width: 25%;
+  margin-top: 10px;
+}
+.xqnav > div img {
+  width: 60%;
+  margin-left: 20%;
+}
+.xqnav > div span {
+  display: block;
+  text-align: center;
+}
+.ad > div {
+  width: 50%;
+}
+.ad > div:first-child {
+  border-bottom: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+}
+.ad > div:last-child {
+  margin-left: -1px;
+  margin-top: -1px;
+  border-top: 1px solid #e1e1e1;
+  border-left: 1px solid #e1e1e1;
+}
+.ad > div img {
+  width: 100%;
+}
+.goods {
+  background: #fff !important;
+  border-top: 1px solid #e6e6e6;
+  padding-left: 10px;
+}
+.good {
+  padding: 10px 0px;
+  height: 120px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.good.stop {
+  opacity: 0.5;
+}
+.imgbag {
+  float: left;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+.imgbag img {
+  height: 100%;
+  width: 100%;
+}
+.imgbag span {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  text-align: center;
+  padding: 3px 12px;
+  border-radius: 10px;
+  font-size: 10px;
+  background: rgba(249, 215, 38, 0.8);
+  color: #FFFFFF;
+}
+.goodinfo {
+  line-height: 33px;
+  font-size: 10px;
+}
+.goodinfo .goodname {
+  font-size: 16px;
+}
+.goodinfo .level img {
+  margin-top: 11px;
+  width: 15px;
+}
+.goodinfo .sales {
+  font-size: 12px;
+  float: right;
+  color: #767676;
+  margin-right: 20px;
+}
+.goodinfo .payinfo span {
+  padding: 5px 15px;
+}
+.cheord {
+  padding: 5px 0px;
+  margin-top: 50px;
+  background: #fff !important;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+.shopbar {
+  margin-top: 50px;
+  height: 40px;
+  line-height: 40px;
+  background: #fff !important;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  text-align: center;
+}
+.shopbar div {
+  width: 25%;
+}
+.shopbar div:nth-child(2) {
+  margin: 0px 12.5%;
+}
+.shopbar div.on {
+  border-bottom: 2px solid #f9d726;
+}
+.tab {
+  overflow: hidden;
+}
+.classify {
+  float: left;
+  width: 25%;
+  background: #f8f8f8;
+}
+.classify div {
+  font-size: 12px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #dadada;
+}
+.classify div.on {
+  background: #fff !important;
+}
+.conmain {
+  float: right;
+  width: 75%;
+}
+.conmain > div {
+  padding: 0px 10px;
+}
+.conmain .contitle {
+  height: 30px;
+  line-height: 30px;
+}
+.conmain .warelist {
+  background: #fff !important;
+}
+.ware {
+  padding: 10px 0px;
+  height: 100px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.ware.stop {
+  opacity: 0.5;
+}
+.wareimg {
+  float: left;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.wareimg img {
+  height: 100%;
+  width: 100%;
+}
+.wareinfo {
+  color: #767676;
+  margin-left: 90px;
+  line-height: 27px;
+}
+.wareinfo .warename {
+  color: #000000;
+}
+.wareinfo .price font {
+  color: #f9d726;
+}
+.wareinfo .price span {
+  margin-top: 7px;
+  float: right;
+  padding: 10px 15px;
+  background: url('../img/add.png') center center no-repeat;
+  background-size: 20px 20px;
+}
+.selftop {
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selftop > div {
+  width: 80px;
+  border-radius: 40px;
+}
+.selftop > div img {
+  width: 100%;
+}
+.selftop > div span {
+  color: #FFFFFF;
+  display: block;
+  text-align: center;
+}
+.iconset {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 10px;
+  background: url('../img/set.png') 0px 0px no-repeat;
+  background-size: 20px 20px;
+}
+.xingout {
+  padding: 10px;
+  margin-right: 10px;
+  background: url('../img/xingout.png') center center no-repeat;
+  background-size: 20px 20px;
+}
+.xingout.on {
+  background: url('../img/xingon.png') center center no-repeat;
+  background-size: 20px 20px;
+}
+.ratecon {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f2f2f2;
+  margin-bottom: 20px;
+}
+.pstime {
+  padding-left: 10px;
+  border-radius: 10px;
+  height: 50px;
+  line-height: 50px;
+  background: #f2f2f2;
+}
+.selpstime {
+  opacity: 0;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+.paybg {
+  height: 100px;
+  background: url('../img/paybg.png') 0px 0px no-repeat;
+  background-size: 100% 100px;
+}
+.noinshop {
+  margin-left: 0px;
+  padding: 10px;
+}
+.togley {
+  padding: 25px 25px;
+}
+.playgley {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+  width: 90px;
+  margin-top: 15px;
+}
+.playgley span {
+  width: 20px;
+}
+.ratelist {
+  margin-top: 10px;
+  background: #fff !important;
+  padding: 0px 20px;
+}
+.ratelist .goodinfo {
+  border-bottom: 1px dotted #D8D8D8;
+}
+.ratelist .goodinfo .level {
+  color: #767676;
+}
+.ratelist .goodinfo .time {
+  color: #767676;
+}
+.ratelist .goodinfo .payinfo {
+  color: #f9d726;
+}
+.ratelist .goodinfo .payinfo .localname {
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.loadshop {
+  background-size: 100% 100%;
+}
+.loadshop .opainfo {
+  padding: 15px 5px;
+  height: 80px;
+  line-height: 25px;
+  background: url('../img/vline.png') center center no-repeat rgba(0, 0, 0, 0.3);
+  background-size: 1px 25px;
+  text-align: center;
+  font-size: 12px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+.loadshop .opainfo > div {
+  width: 50%;
+}
+.loadshop .opainfo font {
+  font-size: 20px;
+}
+.manna {
+  padding: 10px 0px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.manna .sname {
+  font-size: 24px;
+}
+.manna .level img {
+  width: 15px;
+}
+.manna .otime {
+  font-size: 12px;
+}
+.ordaddress {
+  background: #fff !important;
+  height: 120px;
+  border-image: url('../img/borimg.png') 15 repeat;
+}
+.newadd {
+  padding-left: 90px;
+  height: 120px;
+  line-height: 120px;
+  background: url('../img/newadd.png') 25px center no-repeat;
+  background-size: 50px auto;
+}
+.ediadd {
+  padding: 30px 40px 30px 60px;
+  height: 120px;
+  line-height: 30px;
+  background: url('../img/addre.png') 25px center no-repeat;
+  background-size: 20px auto;
+}
+.ediadd > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.addAdd {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+.address {
+  background: #fff !important;
+  margin-bottom: 10px;
+}
+.address > div {
+  padding: 0px 20px;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.address .playadd {
+  border-top: 1px solid #E1E1E1;
+}
+.address .playadd span {
+  padding-left: 40px;
+}
+.paymoney {
+  padding: 25px;
+  line-height: 25px;
+  text-align: center;
+  height: 100px;
+  background: url('../img/paybg.png') 0px 0px no-repeat;
+  background-size: 100% 100px;
+}
+.paytype {
+  padding-left: 20px;
+}
+.paytype > div .iconcheck {
+  padding: 25px 15px;
+  background: url('../img/checkracon.png') 0px center no-repeat;
+  background-size: 20px 20px;
+}
+.paytype > div.on .iconcheck {
+  background: url('../img/checkrac.png') 0px center no-repeat;
+  background-size: 20px 20px;
+}
+.hotel {
+  height: 120px;
+  background: #fff !important;
+}
+.hotel .hotellevel {
+  float: right;
+  width: 100px;
+  margin-top: 20px;
+  height: 80px;
+  border-left: 1px solid #D8D8D8;
+}
+.hotelinfo {
+  padding: 0px 110px 0px 20px;
+  font-size: 12px;
+  line-height: 20px;
+}
+.hotelinfo > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hotelinfo .hotelname {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+}
+.hotelinfo .hotelfuwu span {
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+.intime {
+  margin: 20px;
+  height: 60px;
+  background: url('../img/vline.png') center center no-repeat #ffffff;
+  background-size: 1px 25px;
+  text-align: center;
+  line-height: 30px;
+}
+.intime > div {
+  width: 50%;
+}
+.houstype {
+  background: #fff !important;
+  margin-bottom: 10px;
+  padding: 0px 20px;
+}
+.houstype > div {
+  height: 50px;
+  line-height: 50px;
+}
+.houslist {
+  border-bottom: 1px solid #D8D8D8;
+}
+.houslist li {
+  border-top: 1px solid #D8D8D8;
+  padding: 5px 0px;
+}
+.houslist li div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 5px 0px;
+}
+.housargs {
+  font-size: 12px;
+}
+.housargs span:nth-child(2) {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #D8D8D8;
+}
+.order {
+  font-size: 12px;
+}
+.order > div {
+  padding: 0px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.order .oname {
+  height: 40px;
+  line-height: 40px;
+}
+.order .oinfo {
+  padding: 10px 10px;
+  border-bottom: 1px solid #D8D8D8;
+  border-top: 1px solid #D8D8D8;
+}
+.order .oinfo img {
+  width: 80px;
+  height: 80px;
+}
+.order .ginfo {
+  line-height: 30px;
+  padding: 10px 0px 10px 100px;
+}
+.order .btnarea {
+  height: 50px;
+}
+.image img {
+  width: 100px;
+  height: 100px;
+}

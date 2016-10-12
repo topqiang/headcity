@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>登陆</title>
+        <!-- Sets initial viewport load and disables zooming  -->
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" href="../css/public.css" />
+        <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+        <style>
+        	.conbg{
+        		background: url('../img/bg.png') right center no-repeat #f5f8fa;
+    			background-size: auto 50%;
+        	}
+        	.goregister{
+        		padding-top: 20px;
+        		text-align: right;
+        		margin-right: 20px;
+        	}
+        	.login{
+        		margin-top: 50px;
+        		font-size: 30px;
+        		text-align: center;
+        	}
+        	.form{
+        		line-height: 40px;
+        		margin-top: 30px;
+        		font-size: 20px;
+        		width: 80%;
+        		margin-left: 10%;
+        	}
+        	.form li{
+        		margin-bottom: 20px;
+        		width: 100%;
+        		height: 40px;
+        	}
+        	.form li div{
+        		height: 40px;
+        		border-radius: 20px;
+        		border: 1px solid #000;
+        	}
+        	.form li div.login-btn{
+        		border: 0px;
+        		background: rgba(246,112,31,0.8);
+        		color: #fff;
+        	}
+        	div.username{
+        		background: url('../img/username.png') 10px center no-repeat;
+    			background-size: 30px 30px;
+        	}
+        	div.password{
+        		background: url('../img/password.png') 10px center no-repeat;
+    			background-size: 30px 30px;
+        	}
+        	div input{
+        		box-sizing: border-box;
+        		margin-top: -5px;
+        		width: 100%;
+        		height: 100%;
+        		background: rgba(0,0,0,0);
+        		padding-left: 50px;
+        	}
+        </style>
+    </head>
+    <body>
+		<div class="conbg">
+		   	<div class="goregister"><a href="#">去注册>></a></div>
+		   	<div class="login">
+		   		<div>登陆</div>
+		   		<ul class="form">
+		   			<li><div class="username"><input type="text" name="username"/></div></li>
+		   			<li><div class="password"><input type="password" name="password"/></div></li>
+		   			<li style="text-align: right;font-size: 16px;"><a href="#">忘记密码？</a></li>
+		   			<li><div class="login-btn">立即登陆</div></li>
+		   		</ul>
+		   	</div>
+		</div>
+    </body>
+	<script type="text/javascript" src="../js/touch.min.js"></script>
+	<script type="text/javascript">
+		var h=document.documentElement?document.documentElement.clientHeight:document.body.clientHeight;
+		var w=document.documentElement?document.documentElement.clientWidth:document.body.clientWidth;
+		$(".conbg").css({"width":w,"height":h});
+	</script>
+</html>

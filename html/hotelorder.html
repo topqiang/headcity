@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>提交订单</title>
+        <!-- Sets initial viewport load and disables zooming  -->
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" href="../css/public.css" />
+        <link href="../css/reset.css" rel="stylesheet"/>
+        <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+        <style>
+        	
+        </style>
+    </head>
+    <body>
+    	<header class="bgz">
+    		<div class="left">提交订单</div>
+    	</header>
+    	<div class="content" style="padding: 50px 0px 10px;">
+    		<div class="orderline">
+		  		<div class="bgb">
+		  			<span class="right fr"></span><span class="fr mar5 colg" id="start">2016-10-29</span>入住时间
+		  		</div>
+		  	</div>
+		  	<div class="orderline">
+		  		<div class="bgb">
+		  			<span class="right fr"></span><span class="fr mar5 colg" id="end">2016-10-30</span>离店时间
+		  		</div>
+		  	</div>
+    		<div class="lines mat10">
+	    		<div><span class="leftitle">入住人</span><span>凌华</span></div>
+		  		<div><span class="leftitle">联系手机</span><span>18200336666</span></div>
+	    	</div>
+	    	
+	    	<ul class="houslist mat10 pad0-20 bgb" style="border-bottom: 0px;">
+	   			<li style="border-top: 0px;">
+	   				<div>大床房A</div>
+	   				<div class="cole housargs">
+	   					<span>不含早</span>
+	   					<span>无窗</span>
+	   				</div>
+	   				<div class="colz">￥<span class="fs16">169</span><span class="fr">X1</span></div>
+	   			</li>
+		   	</ul>
+		   	
+		   	<div class="pad20 textcen cole fs12">提交订单后，请等待商家接单，再付款</div>
+    	</div>
+    	
+    	<!--确认订单-->
+    	<div class="gley" null="stop">
+			<div class="gleycon textrig" style="padding-right: 120px;">
+				总共：<font>￥<span class="money">50</span></font>
+			</div>
+			<div class="gleybtn">
+				提交订单
+			</div>
+		</div>
+    </body>
+    <script type="text/javascript">
+		var start = {
+		  elem: '#start',
+		  format: 'YYYY-MM-DD',
+		  min: laydate.now(), //设定最小日期为当前日期
+		  max: '2099-06-16', //最大日期
+		  istime: false,
+		  istoday: true,
+		  fixed: true, 
+		  choose: function(datas){
+		     end.min = datas; //开始日选好后，重置结束日的最小日期
+		 	end.start = datas //将结束日的初始值设定为开始日
+		  }
+		};
+		var end = {
+		  elem: '#end',
+		  format: 'YYYY-MM-DD',
+		  min: laydate.now(),
+		  max: '2099-06-16',
+		  istime: false,
+		  istoday: true,
+		  fixed: true, 
+		  choose: function(datas){
+		    start.max = datas; //结束日选好后，重置开始日的最大日期
+		  }
+		};
+		laydate(start);
+		laydate(end);
+	</script>
+</html>

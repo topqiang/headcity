@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>易点到家</title>
+        <!-- Sets initial viewport load and disables zooming  -->
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" href="../css/public.css" />
+        <link href="../css/reset.css" rel="stylesheet"/>
+        <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/yxMobileSlider.js" ></script>
+        <style>
+        	
+        </style>
+    </head>
+    <body>
+    	<header class="bgz">
+    		<div class="left">蓝山</div>
+    	</header>
+		<div class="content" style="padding-top: 50px;">
+		   	<div class="slider">
+		      	<ul>
+		            <li><a href="#" target="_blank"><img src="../img/1.png" alt="" class="width"></a></li>
+		            <li><a href="#" target="_blank"><img src="../img/2.png" alt="" class="width"></a></li>
+		            <li><a href="#" target="_blank"><img src="../img/3.png" alt="" class="width"></a></li>
+		            <li><a href="#" target="_blank"><img src="../img/4.png" alt="" class="width"></a></li>
+		      	</ul>
+		   	</div>
+	   		<div class="wareinfo noinshop">
+	   			<div class="fr">
+		   			<div class="togley icongley disn"></div>
+		   			<div class="playgley">
+		   				<span class="iconjian"></span>
+		   				<span>1</span>
+		   				<span class="iconadd"></span>
+		   			</div>
+		   		</div>
+	   			<div class="warename">蓝山</div>
+   				<div class="price">
+   					<font>￥10</font>/份
+   				</div>
+	   		</div>
+		</div>
+		<div class="gley" null="stop">
+			<span class="stopmsg">购物车空空如也~</span>
+			<div class="gleycon">
+				<font>￥<span class="money">22</span></font>(另需配送费￥<span class="luggage">3</span>)
+			</div>
+			<div class="gleybtn">
+				选好了
+			</div>
+		</div>
+    </body>
+	<script type="text/javascript" src="../js/touch.min.js"></script>
+	<script type="text/javascript">
+		$(".slider").yxMobileSlider({width:640,height:550,during:3000});
+	</script>
+</html>
