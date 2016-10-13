@@ -18,8 +18,14 @@ body {
 .bgz {
   background: #f9d726;
 }
+.bgbtn {
+  background: #4ad67a;
+}
 .colz {
   color: #f9d726;
+}
+.colp {
+  color: #ef6353;
 }
 .fr {
   float: right;
@@ -27,17 +33,23 @@ body {
 .fl {
   float: left;
 }
+.bol5 {
+  border-left: 5px solid #f9d726;
+}
 .bgza {
   background: rgba(249, 215, 38, 0.8);
 }
 .bgb {
   background: #fff !important;
 }
+.bgr {
+  background: #F5092C;
+}
 .bgf {
   background: #f2f2f2;
 }
 .colb {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 .cole {
   color: #767676;
@@ -55,11 +67,11 @@ body {
   justify-content: space-around;
   flex-flow: wrap;
 }
-.colf {
-  color: #f3cc00;
-}
 .colg {
   color: #42bdcc;
+}
+.colr {
+  color: #F5092C;
 }
 .disn {
   display: none;
@@ -74,9 +86,10 @@ body {
   margin-right: 60px;
 }
 .borbtn {
+  color: #ef6353;
   padding: 5px 20px;
   border-radius: 4px;
-  border: 1px solid #f9d726;
+  border: 1px solid #ef6353;
 }
 .botarea {
   height: 50px;
@@ -85,11 +98,13 @@ body {
   width: 100%;
 }
 header {
+  height: 50px;
+  line-height: 50px;
   position: fixed;
   top: 0px;
   z-index: 8;
   width: 100%;
-  color: #FFFFFF;
+  text-align: center;
 }
 header span.local {
   padding: 25px;
@@ -106,11 +121,17 @@ header .sousuo {
   font-size: 14px;
   background: rgba(255, 255, 255, 0.5);
 }
-header div.left {
+header span.left {
+  float: left;
   height: 50px;
-  line-height: 50px;
   padding-left: 36px;
-  background: url('../img/left.png') 13px center no-repeat;
+  background: url('../img/left.png') 13px center no-repeat transparent;
+  background-size: 10px 20px;
+}
+header span.left.hei {
+  color: #000000;
+  text-align: center;
+  background: url('../img/lefth.png') 13px center no-repeat transparent;
   background-size: 10px 20px;
 }
 .label {
@@ -138,35 +159,35 @@ footer > div.on {
   color: #f9d726;
 }
 footer > div:nth-child(1) {
-  background: url('../img/fter1.png') center 10px no-repeat;
+  background: url('../img/fter1.png') center 10px no-repeat transparent;
   background-size: auto 30px;
 }
 footer > div:nth-child(1).on {
-  background: url('../img/fter1on.png') center 10px no-repeat;
+  background: url('../img/fter1on.png') center 10px no-repeat transparent;
   background-size: auto 30px;
 }
 footer > div:nth-child(2) {
-  background: url('../img/fter2.png') center 10px no-repeat;
+  background: url('../img/fter2.png') center 10px no-repeat transparent;
   background-size: auto 30px;
 }
 footer > div:nth-child(2).on {
-  background: url('../img/fter2on.png') center 10px no-repeat;
+  background: url('../img/fter2on.png') center 10px no-repeat transparent;
   background-size: auto 30px;
 }
 footer > div:nth-child(3) {
-  background: url('../img/fter3.png') center 10px no-repeat;
+  background: url('../img/fter3.png') center 10px no-repeat transparent;
   background-size: auto 30px;
 }
 footer > div:nth-child(3).on {
-  background: url('../img/fter3on.png') center 10px no-repeat;
+  background: url('../img/fter3on.png') center 10px no-repeat transparent;
   background-size: auto 30px;
 }
 footer > div:nth-child(4) {
-  background: url('../img/fter4.png') center 10px no-repeat;
+  background: url('../img/fter4.png') center 10px no-repeat transparent;
   background-size: auto 30px;
 }
 footer > div:nth-child(4).on {
-  background: url('../img/fter4on.png') center 10px no-repeat;
+  background: url('../img/fter4on.png') center 10px no-repeat transparent;
   background-size: auto 30px;
 }
 footer > div span {
@@ -187,23 +208,22 @@ footer > div span {
   bottom: 50px;
   background: #fff !important;
   width: 100%;
+  font-size: 14px;
 }
 .zhcon .gootitle {
-  height: 30px;
-  line-height: 30px;
-  background: url('../img/yline.png') 0px center no-repeat;
-  background-size: 4px 30px;
+  padding: 10px;
+  background: #f6f6f6;
 }
 .alrelist {
-  background: url('../img/zhaobg.png') 0px 0px no-repeat;
-  background-size: 100% 100%;
+  background: #fff !important;
   padding: 10px 0px;
 }
 .alrelist li {
+  border-bottom: 1px solid #E1E1E1;
   padding: 10px 10px;
 }
-.alrelist li > div {
-  padding-left: 20px;
+.alrelist li:last-child {
+  border-bottom: 0px;
 }
 .alrelist li > div .playgley {
   margin-top: 0px;
@@ -217,47 +237,49 @@ footer > div span {
   width: 100%;
   color: #dadada;
   padding-left: 20px;
-  background: #fff !important;
-}
-.gley .stopmsg {
-  display: none;
+  background: rgba(0, 0, 0, 0.7);
 }
 .gley .gleybtn {
-  float: right;
-  text-align: center;
-  color: #FFFFFF;
-  padding: 0px 25px;
-  background: #f9d726;
-}
-.gley.stop .stopmsg {
-  display: inline-block;
-}
-.gley.stop .gleycon {
   display: none;
 }
-.gley.stop .gleybtn {
-  background: #dadada;
+.gley.on .nomsg {
+  display: none;
 }
-.ingley {
-  padding: 25px 20px;
-  background: url('../img/gleyon.png') 0px center no-repeat;
-  background-size: 30px 30px;
+.gley.on .gleycon font {
+  color: #FFFFFF !important;
 }
-.ingley .subnum {
-  top: 20px;
-  left: 23px;
+.gley.on .gleybtn {
+  display: block;
+  float: right;
+  color: #FFFFFF !important;
+  text-align: center;
+  padding: 0px 25px;
+  background: #4ad67a;
+}
+.gley.on .icongley {
+  background: url('../img/gleyon.png') 0px center no-repeat transparent;
+  background-size: 50px 50px;
+}
+.gley.on .subnum {
+  top: 12px;
+  left: 32px;
   width: 12px;
   height: 12px;
   line-height: 12px;
-  background: #f9d726;
-  color: #FFFFFF;
+  background: #F5092C;
+  color: #FFFFFF !important;
   font-size: 6px;
   text-align: center;
   border-radius: 5px;
 }
+.icongley {
+  padding: 25px 30px;
+  background: url('../img/gley.png') 0px center no-repeat transparent;
+  background-size: 50px 50px;
+}
 .smbtn {
   padding: 2px 5px;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   background: #f9d726;
   border-radius: 5px;
 }
@@ -267,7 +289,7 @@ footer > div span {
 }
 .lmbtn {
   padding: 5px 20px;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   background: #f9d726;
   font-size: 16px;
   border-radius: 5px;
@@ -289,166 +311,228 @@ footer > div span {
 }
 .gleycon font {
   font-size: 18px;
-  color: #f9d726;
+}
+.blinput input {
+  background: transparent;
+  width: 100%;
+  margin-top: 50%;
+  height: 20px;
+  margin-top: 10px;
+}
+.iconuser {
+  height: 40px;
+  padding-left: 50px;
+  background: url('../img/username.png') 10px center no-repeat #f3f3f3;
+  background-size: 20px 20px;
+}
+.iconcode {
+  height: 40px;
+  width: 50%;
+  padding-left: 50px;
+  background: url('../img/codeh.png') 10px center no-repeat #f3f3f3;
+  background-size: 20px 20px;
+}
+.iconsou {
+  padding: 25px 15px;
+  background: url('../img/iconsou.png') 0px center no-repeat transparent;
+  background-size: 20px 20px;
+}
+.iconpwd {
+  height: 40px;
+  padding-left: 50px;
+  background: url('../img/password.png') 10px center no-repeat #f3f3f3;
+  background-size: 20px 20px;
 }
 .icongley {
-  background: url('../img/gley.png') 0px center no-repeat;
+  background: url('../img/gley.png') 0px center no-repeat transparent;
   background-size: 50px 50px;
 }
 .iconjian {
-  background: url('../img/jiannum.png') center center no-repeat;
+  background: url('../img/jiannum.png') center center no-repeat transparent;
   background-size: 20px 20px;
 }
 .iconzan {
   padding-left: 25px;
-  background: url('../img/zan.png') 0px center no-repeat;
-  background-size: 20px 20px;
+  background: url('../img/zan.png') 0px center no-repeat transparent;
+  background-size: 16px 16px;
+}
+.iconunzan {
+  padding-left: 25px;
+  background: url('../img/unzan.png') 0px center no-repeat transparent;
+  background-size: 16px 16px;
 }
 .iconsousuo {
   padding-left: 30px;
-  background: url('../img/sousuo.png') 0px center no-repeat;
+  background: url('../img/sousuo.png') 0px center no-repeat transparent;
   background-size: 20px 20px;
 }
 .iconpche {
   padding-left: 30px;
-  background: url('../img/pche.png') left center no-repeat;
+  background: url('../img/pche.png') left center no-repeat transparent;
   background-size: 30px 30px;
 }
 .iconsanj {
-  background: url('../img/sanj.png') right center no-repeat;
-  background-size: 5px 5px;
+  background: url('../img/sanj.png') right center no-repeat transparent;
+  background-size: 10px 10px;
 }
 .iconsanj.on {
-  background: url('../img/sanjon.png') right center no-repeat;
-  background-size: 5px 5px;
+  color: #ef6353;
+  background: url('../img/sanjon.png') right center no-repeat transparent;
+  background-size: 10px 10px;
+}
+.iconjs {
+  background: url('../img/js.png') right center no-repeat transparent;
+  background-size: 10px 10px;
+}
+.iconjx {
+  background: url('../img/jx.png') right center no-repeat transparent;
+  background-size: 10px 10px;
+}
+.iconjw {
+  background: url('../img/js.png') right center no-repeat transparent;
+  background-size: 10px 10px;
 }
 .iconadd {
-  background: url('../img/add.png') center center no-repeat;
+  background: url('../img/add.png') center center no-repeat transparent;
   background-size: 20px 20px;
 }
 .phone {
-  background: url('../img/phone.png') 10px center no-repeat;
+  background: url('../img/phone.png') 10px center no-repeat transparent;
   background-size: 25px 30px;
 }
 .code {
-  background: url('../img/code.png') 10px center no-repeat;
+  background: url('../img/code.png') 10px center no-repeat transparent;
   background-size: 25px 30px;
 }
 .iconkefu {
   padding-left: 35px;
-  background: url('../img/kefu.png') 0px center no-repeat;
+  background: url('../img/kefu.png') 0px center no-repeat transparent;
   background-size: 25px 25px;
 }
 .iconemail {
-  background: url('../img/email.png') 10px center no-repeat;
+  background: url('../img/email.png') 10px center no-repeat transparent;
   background-size: 25px 30px;
+}
+.iconsys {
+  padding: 30px 10px 30px 100px;
+  background: url('../img/iconsys.png') 20px center no-repeat transparent;
+  background-size: 80px 80px;
+}
+.iconord {
+  padding: 30px 10px 30px 100px;
+  background: url('../img/iconord.png') 20px center no-repeat transparent;
+  background-size: 80px 80px;
 }
 .iconys {
-  background: url('../img/ys.png') 10px center no-repeat;
-  background-size: 25px 30px;
-}
-.iconcode {
-  background: url('../img/codeh.png') 10px center no-repeat;
+  background: url('../img/ys.png') 10px center no-repeat transparent;
   background-size: 25px 30px;
 }
 .unlock {
-  background: url('../img/unlock.png') 10px center no-repeat;
+  background: url('../img/unlock.png') 10px center no-repeat transparent;
   background-size: 25px 30px;
 }
 .iconcoupon {
-  background: url('../img/coupon.png') 10px center no-repeat;
+  background: url('../img/coupon.png') 10px center no-repeat transparent;
   background-size: 25px 25px;
 }
 .iconmoney {
-  background: url('../img/money.png') 10px center no-repeat;
+  background: url('../img/money.png') 10px center no-repeat transparent;
   background-size: 25px 30px;
 }
 .icontix {
-  background: url('../img/tix.png') 10px center no-repeat;
+  background: url('../img/tix.png') 10px center no-repeat transparent;
   background-size: 25px 25px;
 }
 .iconchz {
-  background: url('../img/chz.png') 10px center no-repeat;
+  background: url('../img/chz.png') 10px center no-repeat transparent;
   background-size: 25px 25px;
 }
+.iconrac {
+  background: url('../img/checkracon.png') 0px center no-repeat transparent;
+  background-size: 20px 20px;
+}
+.iconrac.on {
+  background: url('../img/checkrac.png') 0px center no-repeat transparent;
+  background-size: 20px 20px;
+}
 .iconaddre {
-  background: url('../img/addre.png') 10px center no-repeat;
+  background: url('../img/addre.png') 10px center no-repeat transparent;
   background-size: 20px 20px;
 }
 .iconaddr {
   padding-right: 15px;
-  background: url('../img/addre.png') right center no-repeat;
+  background: url('../img/addre.png') right center no-repeat transparent;
   background-size: 15px 15px;
 }
 .icontel {
-  background: url('../img/tel.png') 10px center no-repeat;
+  background: url('../img/tel.png') 10px center no-repeat transparent;
   background-size: 20px 20px;
 }
 .icontelr {
   display: inline-block;
   padding-right: 15px;
-  background: url('../img/tel.png') right center no-repeat;
+  background: url('../img/tel.png') right center no-repeat transparent;
   background-size: 15px 15px;
 }
 .iconedi {
-  background: url('../img/edit.png') 10px center no-repeat;
+  background: url('../img/edit.png') 10px center no-repeat transparent;
   background-size: 20px 20px;
 }
 .icondel {
-  background: url('../img/del.png') 10px center no-repeat;
+  background: url('../img/del.png') 10px center no-repeat transparent;
   background-size: 20px 20px;
 }
 .iconwifi {
-  background: url('../img/wifi.png') 0px center no-repeat;
+  background: url('../img/wifi.png') 0px center no-repeat transparent;
   background-size: 20px 20px;
 }
 .iconsann {
-  background: url('../img/sann.png') 0px center no-repeat;
+  background: url('../img/sann.png') 0px center no-repeat transparent;
   background-size: 20px 20px;
 }
 .iconpadd {
-  background: url('../img/padd.png') 0px center no-repeat;
+  background: url('../img/padd.png') 0px center no-repeat transparent;
   background-size: 20px 20px;
 }
 .iconcuif {
-  background: url('../img/cuif.png') 0px center no-repeat;
+  background: url('../img/cuif.png') 0px center no-repeat transparent;
   background-size: 20px 20px;
 }
 .iconaddress {
-  background: url('../img/address.png') 0px center no-repeat;
+  background: url('../img/address.png') 0px center no-repeat transparent;
   background-size: 15px 15px;
 }
 .iconwx {
-  background: url('../img/wx.png') 0px center no-repeat;
+  background: url('../img/wx.png') 0px center no-repeat transparent;
   background-size: auto 30px;
 }
 .iconzfb {
-  background: url('../img/zfb.png') 0px center no-repeat;
+  background: url('../img/zfb.png') 0px center no-repeat transparent;
   background-size: auto 30px;
 }
 .iconye {
-  background: url('../img/ye.png') 0px center no-repeat;
+  background: url('../img/ye.png') 0px center no-repeat transparent;
   background-size: auto 30px;
 }
 .iconkeep {
-  background: url('../img/keep.png') 10px center no-repeat;
+  background: url('../img/keep.png') 10px center no-repeat transparent;
   background-size: 25px 30px;
 }
 .right {
   padding: 25px 15px;
-  background: url('../img/right.png') 0px center no-repeat;
+  background: url('../img/right.png') 0px center no-repeat transparent;
   background-size: 10px 20px;
 }
 .iconlu {
-  background: url('../img/iconlu.png') 0px center no-repeat;
+  background: url('../img/iconlu.png') 0px center no-repeat transparent;
   background-size: 8px 8px;
 }
 .check {
-  background: url('../img/check.png') 20px center no-repeat;
+  background: url('../img/check.png') 20px center no-repeat transparent;
   background-size: 20px 20px;
 }
 .check.on {
-  background: url('../img/checkon.png') 20px center no-repeat;
+  background: url('../img/checkon.png') 20px center no-repeat transparent;
   background-size: 20px 20px;
 }
 .getcode {
@@ -457,7 +541,7 @@ footer > div span {
   line-height: 30px;
   padding: 0px 10px;
   float: right;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   text-align: center;
   background: #f9d726;
   border-radius: 4px;
@@ -469,7 +553,7 @@ footer > div span {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   margin-left: 5%;
   border-radius: 4px;
 }
@@ -617,21 +701,40 @@ footer > div span {
   display: block;
   text-align: center;
 }
+.ad {
+  height: 100px;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background: #fff !important;
+}
 .ad > div {
-  width: 50%;
-}
-.ad > div:first-child {
-  border-bottom: 1px solid #e1e1e1;
-  border-right: 1px solid #e1e1e1;
-}
-.ad > div:last-child {
-  margin-left: -1px;
-  margin-top: -1px;
-  border-top: 1px solid #e1e1e1;
-  border-left: 1px solid #e1e1e1;
+  display: inline-block;
+  margin-left: 20px;
+  position: relative;
+  height: 80px;
+  line-height: 80px;
+  width: 80px;
 }
 .ad > div img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 4px;
+  height: 100%;
   width: 100%;
+}
+.ad > div span {
+  color: #FFFFFF !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 80px;
+  font-size: 12px;
+  text-align: center;
 }
 .goods {
   background: #fff !important;
@@ -666,11 +769,25 @@ footer > div span {
   border-radius: 10px;
   font-size: 10px;
   background: rgba(249, 215, 38, 0.8);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 .goodinfo {
   line-height: 33px;
   font-size: 10px;
+}
+.goodinfo.zaocan {
+  height: 25px;
+  line-height: 25px;
+}
+.goodinfo.zaocan .descrip {
+  height: 25px;
+  padding-right: 20px;
+  line-height: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.goodinfo.zaocan .level img {
+  margin-top: 0px;
 }
 .goodinfo .goodname {
   font-size: 16px;
@@ -685,11 +802,11 @@ footer > div span {
   color: #767676;
   margin-right: 20px;
 }
-.goodinfo .payinfo span {
+.goodinfo .payinfo > span {
   padding: 5px 15px;
 }
 .cheord {
-  padding: 5px 0px;
+  padding: 10px 0px;
   margin-top: 50px;
   background: #fff !important;
   margin-bottom: 10px;
@@ -748,42 +865,6 @@ footer > div span {
 .conmain .warelist {
   background: #fff !important;
 }
-.ware {
-  padding: 10px 0px;
-  height: 100px;
-  border-bottom: 1px solid #e6e6e6;
-}
-.ware.stop {
-  opacity: 0.5;
-}
-.wareimg {
-  float: left;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.wareimg img {
-  height: 100%;
-  width: 100%;
-}
-.wareinfo {
-  color: #767676;
-  margin-left: 90px;
-  line-height: 27px;
-}
-.wareinfo .warename {
-  color: #000000;
-}
-.wareinfo .price font {
-  color: #f9d726;
-}
-.wareinfo .price span {
-  margin-top: 7px;
-  float: right;
-  padding: 10px 15px;
-  background: url('../img/add.png') center center no-repeat;
-  background-size: 20px 20px;
-}
 .selftop {
   background-size: 100% 100%;
   display: flex;
@@ -798,7 +879,7 @@ footer > div span {
   width: 100%;
 }
 .selftop > div span {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   display: block;
   text-align: center;
 }
@@ -807,17 +888,17 @@ footer > div span {
   top: 15px;
   right: 15px;
   padding: 10px;
-  background: url('../img/set.png') 0px 0px no-repeat;
+  background: url('../img/set.png') 0px 0px no-repeat transparent;
   background-size: 20px 20px;
 }
 .xingout {
   padding: 10px;
   margin-right: 10px;
-  background: url('../img/xingout.png') center center no-repeat;
+  background: url('../img/xingout.png') center center no-repeat transparent;
   background-size: 20px 20px;
 }
 .xingout.on {
-  background: url('../img/xingon.png') center center no-repeat;
+  background: url('../img/xingon.png') center center no-repeat transparent;
   background-size: 20px 20px;
 }
 .ratecon {
@@ -844,7 +925,7 @@ footer > div span {
 }
 .paybg {
   height: 100px;
-  background: url('../img/paybg.png') 0px 0px no-repeat;
+  background: url('../img/paybg.png') 0px 0px no-repeat transparent;
   background-size: 100% 100px;
 }
 .noinshop {
@@ -902,7 +983,7 @@ footer > div span {
   background-size: 1px 25px;
   text-align: center;
   font-size: 12px;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   display: flex;
   justify-content: space-around;
   flex-flow: wrap;
@@ -931,21 +1012,21 @@ footer > div span {
 }
 .ordaddress {
   background: #fff !important;
-  height: 120px;
+  height: 80px;
   border-image: url('../img/borimg.png') 15 repeat;
 }
 .newadd {
   padding-left: 90px;
   height: 120px;
   line-height: 120px;
-  background: url('../img/newadd.png') 25px center no-repeat;
+  background: url('../img/newadd.png') 25px center no-repeat transparent;
   background-size: 50px auto;
 }
 .ediadd {
-  padding: 30px 40px 30px 60px;
-  height: 120px;
+  padding: 10px 40px 10px 60px;
+  height: 80px;
   line-height: 30px;
-  background: url('../img/addre.png') 25px center no-repeat;
+  background: url('../img/addre.png') 25px center no-repeat transparent;
   background-size: 20px auto;
 }
 .ediadd > div {
@@ -981,7 +1062,7 @@ footer > div span {
   line-height: 25px;
   text-align: center;
   height: 100px;
-  background: url('../img/paybg.png') 0px 0px no-repeat;
+  background: url('../img/paybg.png') 0px 0px no-repeat transparent;
   background-size: 100% 100px;
 }
 .paytype {
@@ -989,11 +1070,11 @@ footer > div span {
 }
 .paytype > div .iconcheck {
   padding: 25px 15px;
-  background: url('../img/checkracon.png') 0px center no-repeat;
+  background: url('../img/checkracon.png') 0px center no-repeat transparent;
   background-size: 20px 20px;
 }
 .paytype > div.on .iconcheck {
-  background: url('../img/checkrac.png') 0px center no-repeat;
+  background: url('../img/checkrac.png') 0px center no-repeat transparent;
   background-size: 20px 20px;
 }
 .hotel {
@@ -1100,4 +1181,42 @@ footer > div span {
 .image img {
   width: 100px;
   height: 100px;
+}
+.grate {
+  height: auto !important;
+  line-height: 20px !important;
+  padding: 10px 0px;
+}
+.grate .imgtool img {
+  width: 20px;
+  height: 20px;
+}
+.grate .imgad {
+  padding: 10px 0px;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.grate .imgad img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.getfootime {
+  height: 80px;
+  padding: 20px 20px 20px 65px;
+  line-height: 40px;
+  background: url('../img/gettime.png') 25px center no-repeat #ffffff;
+  background-size: 20px auto;
+}
+.getfootime .rcontent {
+  text-align: right;
+  line-height: 20px;
+}
+.unum {
+  top: 12px;
+  left: 83px;
+  background: #FF4444;
+  border-radius: 50%;
+  width: 14px;
 }

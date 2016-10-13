@@ -6,6 +6,8 @@
 @toph:50px;
 @fc:#666;
 @bgc:#F6F6F6;
+@bgbtn: #4AD67A;
+@borcol:#EF6353;
 body{
    background: @bgc; 
 }
@@ -25,8 +27,14 @@ body{
 .bgz{
     background: rgb(@r,@g,@b);
 }
+.bgbtn{
+    background: @bgbtn;
+}
 .colz{
     color: rgb(@r,@g,@b);
+}
+.colp{
+    color: @borcol;
 }
 .fr{
    float: right; 
@@ -34,17 +42,23 @@ body{
 .fl{
     float: left;
 }
+.bol5{
+    border-left: 5px solid rgb(@r,@g,@b);
+}
 .bgza{
     background: rgba(@r,@g,@b,@a);
 }
 .bgb{
     background: #fff !important;
 }
+.bgr{
+    background: #F5092C;
+}
 .bgf{
     background: #f2f2f2;
 }
 .colb{
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 .cole{
     color: #767676;
@@ -65,11 +79,11 @@ body{
     justify-content: space-around;
     flex-flow: wrap;
 }
-.colf{
-    color: #f3cc00;
-}
 .colg{
     color: #42bdcc;
+}
+.colr{
+    color: #F5092C;
 }
 .disn{
     display: none;
@@ -84,8 +98,8 @@ body{
    height: @height;
    line-height: @height; 
 }
-.bgimg(@url,@x,@y,@width,@height){
-    background: url(@url) @x @y no-repeat;
+.bgimg(@url,@x,@y,@width,@height,@bg:transparent){
+    background: url(@url) @x @y no-repeat @bg;
     background-size: @width @height;
 }
 .textrig{
@@ -95,9 +109,10 @@ body{
     margin-right: 60px;
 }
 .borbtn{
+    color: @borcol;
     padding: 5px 20px;
     border-radius: 4px;
-    border: 1px solid rgb(@r,@g,@b);
+    border: 1px solid @borcol;
 }
 .labelimg(@url,@height){
     .lh(@height);
@@ -111,11 +126,12 @@ body{
     width: 100%;
 }
 header{
+    .lh(@toph);
     position: fixed;
     top: 0px;
     z-index: 8;
     width: 100%;
-    .colb;
+    .textcen;
     span.local{
         padding: 25px;
         .labelimg('../img/msg.png',@toph);
@@ -127,10 +143,16 @@ header{
         .fs(14px);
         background: rgba(255,255,255,0.5);
     }
-    div.left{
-        .lh(@toph);
+    span.left{
+        .fl;
+        height: 50px;
         padding-left: 36px;
         .bgimg('../img/left.png',13px,center,10px,20px);
+        &.hei{
+            color: #000000;
+            .textcen;
+            .bgimg('../img/lefth.png',13px,center,10px,20px);
+        }
     }
 }
 .label{
@@ -197,18 +219,22 @@ footer{
     bottom: 50px;
     .bgb;
     width: 100%;
+    .fs(14px);
     .gootitle{
-        .lh(30px);
-        .bgimg('../img/yline.png',0px,center,4px,30px);
+        padding:10px;
+        background: @bgc;
     }
 }
 .alrelist{
-    .bgimg('../img/zhaobg.png',0px,0px,100%,100%);
+    .bgb;
     padding: 10px 0px;
-    li{
-         padding: 10px 10px;
+    li{ 
+        border-bottom: 1px solid #E1E1E1;
+        &:last-child{
+            border-bottom: 0px;
+        }
+        padding: 10px 10px;
         >div{
-            padding-left: 20px;
             .playgley{
                 margin-top: 0px;
             }
@@ -224,43 +250,46 @@ footer{
     width: 100%;
     color: #dadada;
     padding-left: 20px;
-    .bgb;
-    .stopmsg{
+    background: rgba(0,0,0,0.7);
+    .gleybtn{
         display: none;
     }
-    .gleybtn{
-        .fr;
-        .textcen;
-        .colb;
-        padding: 0px 25px;
-        .bgz;
-    }
-    &.stop{
-        .stopmsg{
-            display: inline-block;
-        }
-        .gleycon{
-            display: none;
-        }
-        .gleybtn{
-            background: #dadada;
-        }
-    }
 }
-.ingley{
-    padding: 25px 20px;
-    .bgimg('../img/gleyon.png',0px,center,30px,30px);
+.gley.on{
+    .nomsg{
+        display: none;
+    }
+    .gleycon{
+        font{
+         .colb;   
+        }
+    }
+    .gleybtn{
+        display: block;
+        .fr;
+        .colb;
+        .textcen;
+        padding: 0px 25px;
+        background: @bgbtn;
+    }
+    .icongley{
+        .bgimg('../img/gleyon.png',0px,center,50px,50px);
+    }
     .subnum{
-        top: 20px;
-        left: 23px;
+        top: 12px;
+        left: 32px;
         width: 12px;
         .lh(12px);
-        .bgz;
+        .bgr;
         .colb;
         .fs(6px);
         .textcen;
         border-radius: 5px;
     }
+}
+.icongley{
+    padding: 25px 30px;
+    .bgimg('../img/gley.png',0px,center,50px,50px);
 }
 .smbtn{
     padding: 2px 5px;
@@ -294,8 +323,36 @@ footer{
     .cole;
     font{
         .fs(18px);
-        .colz;
     }
+}
+.blinput{
+    input{
+        background: transparent;
+        width: 100%;
+        margin-top: 50%;
+        height: 20px;
+        margin-top: 10px;
+    }
+}
+.iconuser{
+    height: 40px;
+    padding-left: 50px;
+    .bgimg('../img/username.png',10px,center,20px,20px,#F3F3F3); 
+}
+.iconcode{
+    height: 40px;
+    width: 50%;
+    padding-left: 50px;
+    .bgimg('../img/codeh.png',10px,center,20px,20px,#F3F3F3);
+}
+.iconsou{
+    padding: 25px 15px;
+    .bgimg('../img/iconsou.png',0px,center,20px,20px);
+}
+.iconpwd{
+    height: 40px;
+    padding-left: 50px;
+    .bgimg('../img/password.png',10px,center,20px,20px,#F3F3F3); 
 }
 .icongley{
    .bgimg('../img/gley.png',0px,center,50px,50px); 
@@ -305,7 +362,11 @@ footer{
 }
 .iconzan{
     padding-left: 25px;
-    .bgimg('../img/zan.png',0px,center,20px,20px); 
+    .bgimg('../img/zan.png',0px,center,16px,16px); 
+}
+.iconunzan{
+    padding-left: 25px;
+    .bgimg('../img/unzan.png',0px,center,16px,16px); 
 }
 .iconsousuo{
     padding-left: 30px;
@@ -316,10 +377,20 @@ footer{
     .bgimg('../img/pche.png',left,center,30px,30px);
 }
 .iconsanj{
-    .bgimg('../img/sanj.png',right,center,5px,5px);
+    .bgimg('../img/sanj.png',right,center,10px,10px);
     &.on{
-        .bgimg('../img/sanjon.png',right,center,5px,5px);
+        .colp;
+        .bgimg('../img/sanjon.png',right,center,10px,10px);
     }
+}
+.iconjs{
+    .bgimg('../img/js.png',right,center,10px,10px);
+}
+.iconjx{
+    .bgimg('../img/jx.png',right,center,10px,10px);
+}
+.iconjw{
+    .bgimg('../img/js.png',right,center,10px,10px);
 }
 .iconadd{
    .bgimg('../img/add.png',center,center,20px,20px); 
@@ -337,11 +408,16 @@ footer{
 .iconemail{
     .bgimg('../img/email.png',10px,center,25px,30px);
 }
+.iconsys{
+    padding: 30px 10px 30px 100px;
+    .bgimg('../img/iconsys.png',20px,center,80px,80px);
+}
+.iconord{
+    padding: 30px 10px 30px 100px;
+    .bgimg('../img/iconord.png',20px,center,80px,80px);
+}
 .iconys{
     .bgimg('../img/ys.png',10px,center,25px,30px);
-}
-.iconcode{
-    .bgimg('../img/codeh.png',10px,center,25px,30px);
 }
 .unlock{
     .bgimg('../img/unlock.png',10px,center,25px,30px);
@@ -357,6 +433,12 @@ footer{
 }
 .iconchz{
     .bgimg('../img/chz.png',10px,center,25px,25px);
+}
+.iconrac{
+    .bgimg('../img/checkracon.png',0px,center,20px,20px);
+    &.on{
+        .bgimg('../img/checkrac.png',0px,center,20px,20px);
+    }
 }
 .iconaddre{
     .bgimg('../img/addre.png',10px,center,20px,20px);
@@ -530,20 +612,36 @@ footer{
     }
 }
 .ad{
+    height: 100px;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    .bgb;
     > div{
-       width: 50%;
-       &:first-child{
-           border-bottom: 1px solid #e1e1e1;
-           border-right: 1px solid #e1e1e1;
-       }
-       &:last-child{
-           margin-left: -1px;
-           margin-top: -1px;
-           border-top: 1px solid #e1e1e1;
-           border-left: 1px solid #e1e1e1;
-       }
+        display: inline-block;
+        margin-left: 20px;
+       .pore;
+       .lh(80px);
+        width: 80px; 
        img{
+           .poab;
+           top:0px;
+           left: 0px;
+           border-radius: 4px;
+           height: 100%;
            width: 100%;
+       }
+       span{
+           .colb;
+           .poab;
+           left: 50%;
+           transform: translateX(-50%);
+           line-height: 80px;
+           .fs(12px);
+           .textcen;
        }
     }
 }
@@ -591,6 +689,19 @@ footer{
 //店铺信息
 .goodinfo{
     line-height: 33px;
+    &.zaocan{
+       .lh(25px); 
+       .descrip{
+           height: 25px;
+           padding-right: 20px;
+           line-height: 12px;
+           overflow: hidden;
+           text-overflow: ellipsis;
+       }
+       .level img{
+           margin-top: 0px;
+       }
+    }
     .fs(10px);
     .goodname{
         .fs(16px);
@@ -605,13 +716,13 @@ footer{
         .cole;
         margin-right: 20px;
     }
-    .payinfo span{
+    .payinfo > span{
         padding: 5px 15px;
     }
 }
 //分类
 .cheord{
-    padding: 5px 0px;
+    padding: 10px 0px;
     margin-top: 50px;
     .bgb;
     margin-bottom: 10px;
@@ -664,38 +775,6 @@ footer{
     }
     .warelist{
         .bgb;
-    }
-}
-.ware{
-    .good(100px);
-}
-.wareimg{
-    .fl;
-    .pore;
-    width: 80px;
-    height: 80px;
-    img{
-        height: 100%;
-        width: 100%;
-    }
-}
-.wareinfo{
-    .cole;
-    margin-left: 90px;
-    line-height: 27px;
-    .warename{
-        color: #000000;
-    }
-    .price{
-        font{
-            color: rgb(@r,@g,@b);
-        }
-        span{
-            margin-top: 7px;
-            .fr;
-            padding: 10px 15px;
-            .bgimg('../img/add.png',center,center,20px,20px);
-        }
     }
 }
 //个人中心页
@@ -840,7 +919,7 @@ footer{
 }
 .ordaddress{
     .bgb;
-    height: 120px;
+    height: 80px;
     border-image:url('../img/borimg.png')15 repeat;
 }
 //新建收获地址
@@ -850,8 +929,8 @@ footer{
     .bgimg('../img/newadd.png',25px,center,50px,auto);
 }
 .ediadd{
-    padding: 30px 40px 30px 60px;
-    height: 120px;
+    padding: 10px 40px 10px 60px;
+    height: 80px;
     line-height: 30px;
     .bgimg('../img/addre.png',25px,center,20px,auto);
     >div{
@@ -999,4 +1078,38 @@ footer{
 .image img{
     width: 100px;
     height: 100px;
+}
+//商品评价列表
+.grate{
+    height: auto !important;
+    line-height: 20px !important;
+    padding: 10px 0px;
+    .imgtool img{
+        width: 20px;
+        height: 20px;
+    }
+    .imgad{
+        padding: 10px 0px;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        img{
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+    }
+}
+.getfootime{
+    height: 80px;
+    padding:20px 20px 20px 65px;
+    line-height: 40px;
+    .bgimg('../img/gettime.png',25px,center,20px,auto,#fff);
+    .rcontent{
+        text-align: right;
+        line-height: 20px;
+    }
+}
+.unum{
+    top: 12px;left: 83px;background: #FF4444;border-radius: 50%;width: 14px;
 }

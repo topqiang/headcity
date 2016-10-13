@@ -19,17 +19,18 @@
     </head>
     <body>
     	<header class="bgz">
-    		<div class="left">订单详情</div>
+    		<span class="left"></span>
+    		订单详情
     	</header>
     	<div class="content" style="padding: 50px 0px 10px;">
-    		<div class="ordaddress mat10">
-    			<span class="right fr" style="margin-top: 33px;"></span>
+    		<div class="ordaddress">
+    			<span class="right fr" style="margin-top: 13px;"></span>
     			<!-- 新建地址 -->
-    			<div class="newadd disn">
-    				请新建收货地址~
+    			<div class="ediadd cole" style="line-height: 60px;">
+    				请填写取货信息
     			</div>
     			<!-- 已有地址    修改地址-->
-    			<div class="ediadd">
+    			<div class="ediadd disn">
     				<div>
     					收货人：张涛
     					<span class="fr mar5">1888888888</span>
@@ -37,42 +38,38 @@
     				<div>收货地址：天津市南开区鑫茂科技园B区1号楼1809</div>
     			</div>
     		</div>
-    		<div class="orderline">
-		  		<div class="pore pstime bgb">
-		  			<span class="right fr"></span><span class="fr mar5" ele="time">18:30</span>送达时间
-		  			<select class="poab selpstime" forele="time">
-    					<option>立即送出</option>
-    					<option>16:50</option>
-    					<option>16:50</option>
-    					<option>16:50</option>
-    					<option>16:50</option>
-    					<option>16:50</option>
-    					<option>16:50</option>
-    				</select>
+    		<div class="getfootime bol5 mat10">
+		  		<div class="fr rcontent">
+		  			<span class="smbtn bge">次日</span>
+		  			<div>早6:30-9:00</div>
+		  		</div>
+		  		<div class="">
+		  			取货时间
 		  		</div>
 		  	</div>
 		  	<div class="orderline">
-		  		<div><span class="fr pad0-20">在线支付</span>支付方式</div>
+		  		<div><span class="fr pad0-20 fs14 cole">支付方式</span>支付方式</div>
 		  	</div>
-    		<div class="lines mat10">
-	    		<div>备注</div>
-		  		<div class="cole fs12">多拿双筷子，少辣椒</div>
+		  	
+		  	<div class="mat10 bgb pad10">
+		  		<div class="pad0-10 bol5">订单详情</div>
+		  	</div>
+		  	
+	    	<div class="formline pad0-10">
+	    		<div>黄焖鸡小份<span class="fr">￥20</span><span class="fr mar60">X1</span></div>
+		  		<div>米饭<span class="fr">￥20</span><span class="fr mar60">X1</span></div>
+		  		<div>西红柿鸡蛋汤<span class="fr">￥5</span><span class="fr mar60">X1</span></div>
 	    	</div>
-	    	<div class="lined mat10">
-	    		<div class="iconlu">黄焖鸡小份<span class="fr">￥20</span><span class="fr mar60">X1</span></div>
-		  		<div class="iconlu">米饭<span class="fr">￥20</span><span class="fr mar60">X1</span></div>
-		  		<div class="iconlu">西红柿鸡蛋汤<span class="fr">￥5</span><span class="fr mar60">X1</span></div>
-	    	</div>
-	    	<div class="line0d">
-	    		<div>配送费<span class="fr">￥5</span></div>
-		  		<div><span class="fr">总计:<font class="colz">￥50</font></span></div>
+	    	<div class="pad10 bgb" style="border-top: 1px solid #E1E1E1;">
+	    		<span class="fr">待支付￥50</span>
+	    		<span class="pad0-10">订单￥50</span>
 	    	</div>
     	</div>
     	
     	<!--确认订单-->
-    	<div class="gley" null="stop">
-			<div class="gleycon textrig" style="padding-right: 120px;">
-				总共：<font>￥<span class="money">50</span></font>
+    	<div class="gley on" null="stop">
+			<div class="gleycon">
+				<font>待支付：￥<span class="money">50</span></font>
 			</div>
 			<div class="gleybtn">
 				提交订单
