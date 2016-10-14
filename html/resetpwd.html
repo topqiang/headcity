@@ -16,23 +16,28 @@
         </style>
     </head>
     <body>
-    	<header class="bgz">
-    		<div class="left">忘记密码</div>
+    	<header class="bgb borb31">
+    		<span class="left hei"></span>
+    		忘记密码
     	</header>
     	<div class="content" style="padding-top: 50px;">
-	    	<div class="line">
-	    		<div class="phone"><input placeholder="请输入手机号"/></div>
-	    		<div class="code">
-	    			<div class="getcode">获取验证码</div>
-	    			<input placeholder="请输入验证码"/>
-	    		</div>
-	    	</div>
-	    	<div class="line">
-	    		<div class="unlock"><input type="password" placeholder="请输入密码"/></div>
-	    		<div class="unlock"><input type="password" placeholder="请再次输入密码"/></div>
-	    	</div>
+	    	<div class="pad20 bgb">
+		   		<div class="pad0-20">
+		   			<div class="blinput borad4 iconuser"><input type="text" name="username" placeholder="请输入原手机号"/></div>
+		   			<div class="fr borbtn mat20" style="height: 40px;">发送验证码</div>
+		   			<div class="blinput borad4 mat20 iconcode">
+		   				<input type="password" name="password" placeholder="请输入新密码"/>
+		   			</div>
+		   			
+		   			<div class="blinput borad4 iconuser mat20"><input type="text" name="username" placeholder="请输入新手机号"/></div>
+		   			<div class="fr borbtn mat20" style="height: 40px;">发送验证码</div>
+		   			<div class="blinput borad4 mat20 iconcode">
+		   				<input type="password" name="password" placeholder="请输入新密码"/>
+		   			</div>
+		   		</div>
+		   	</div>
 	    	
-	    	<div class="big-btn bgz">确认</div>
+	    	<div class="big-btn bgbtn">确认</div>
 	    </div>
     </body>
 </html>

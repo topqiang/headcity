@@ -11,21 +11,37 @@
         <link rel="stylesheet" href="../css/public.css" />
         <link href="../css/reset.css" rel="stylesheet"/>
         <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/public.js"></script>
         <style>
-        	
+        		
         </style>
     </head>
     <body>
-    	<header class="bgz">
-    		<div class="left">充值</div>
+    	<header class="bgz colb">
+    		<span class="left"></span>
+    		充值
     	</header>
 		<div class="content" style="padding-top: 50px;">
-			<div class="line">
+			<div class="lines">
+				<div class="pore">
+					<span class="fr right mar5"></span>
+					<span class="fr" ele="paytype">微信充值</span>
+					<span class="">充值方式</span>
+					<select class="poab selpstime" forele="paytype">
+						<option>微信充值</option>
+						<option>支付宝充值</option>
+						<option>建设银行（尾号9070）</option>
+					</select>
+				</div>
+				<div style="height: 100px;">
+					<div>充值金额</div>
+					<span class="fs24">￥</span><input type="number" placeholder="请输入充值金额" />
+				</div>
 				<div>
-					<input placeholder="请输入充值金额" />
+					<span class="cole">当前余额50.00元,</span><span> 全部提现</span>
 				</div>
 			</div>
-			<div class="big-btn bgz">下一步</div>
+			<div class="big-btn bgbtn">充值</div>
 		</div>
     </body>
 	<script type="text/javascript" src="../js/touch.min.js"></script>

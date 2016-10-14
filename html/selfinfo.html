@@ -11,14 +11,15 @@
         <link rel="stylesheet" href="../css/public.css" />
         <link href="../css/reset.css" rel="stylesheet"/>
         <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+        <script src="../js/public.js"></script>
         <style>
         	
         </style>
     </head>
     <body>
-    	<header class="bgz">
-    		<div class="fr pad0-20">保存</div>
-    		<div class="left">个人资料</div>
+    	<header class="bgz colb">
+    		<span class="left"></span>
+    		个人资料
     	</header>
     	<div class="content" style="padding: 50px 0px 10px;">
 		  	<div class="orderline">
@@ -28,9 +29,23 @@
 		  			<input type="file" class="poab selpstime"/>
 		  		</div>
 		  		<div><span class="fr pad0-20 mar5">Jlion</span>昵称</div>
-		  		<div><span class="right fr"></span><span class="fr mar5">18800223456</span>已绑定手机号</div>
+		  		<div class="pore">
+		  			<span class="right fr"></span>
+		  			<span class="fr cole" ele="sex">保密</span>
+		  			<span>性别</span>
+		  			<select class="poab selpstime" forele="sex">
+		  				<option>保密</option>
+		  				<option>男</option>
+		  				<option>女</option>
+		  			</select>
+		  		</div>
+		  	</div>
+		  	<div class="orderline">
+		  		<div class="cole">账号设置</div>
+		  		<div><span class="right fr"></span><span class="fr mar5">18800223456</span>绑定手机号</div>
 		  		<div><span class="right fr"></span>修改登录密码</div>
 		  	</div>
+		  	<div class="big-btn bgbtn">保存</div>
     	</div>
     </body>
 </html>

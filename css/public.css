@@ -60,6 +60,9 @@ a:active {star:expression(this.onFocus=this.blur());}
 .lh25{
 	line-height: 25px;
 }
+.lh20{
+	line-height: 20px;
+}
 .lh30{
 	line-height: 30px;
 }
