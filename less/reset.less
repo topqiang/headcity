@@ -28,7 +28,7 @@ body{
     background: rgb(@r,@g,@b);
 }
 .bgbtn{
-    background: @bgbtn;
+    background: @bgbtn !important;
 }
 .colz{
     color: rgb(@r,@g,@b);
@@ -114,6 +114,13 @@ body{
     border-radius: 4px;
     border: 1px solid @borcol;
 }
+.borbtnh{
+    color: #333;
+    padding: 5px 20px;
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+
 .labelimg(@url,@height){
     .lh(@height);
     background: url(@url) 10px center no-repeat;
@@ -428,7 +435,7 @@ footer{
     .bgimg('../img/coupon.png',10px,center,25px,25px);
 }
 .iconmoney{
-    .bgimg('../img/money.png',10px,center,25px,30px);
+    .bgimg('../img/money.png',10px,center,25px,25px);
 }
 .icontix{
     .bgimg('../img/tix.png',10px,center,25px,25px);
@@ -446,8 +453,8 @@ footer{
     .bgimg('../img/addre.png',10px,center,20px,20px);
 }
 .iconaddr{
-    padding-right: 15px;
-    .bgimg('../img/addre.png',right,center,15px,15px);
+    padding-left: 35px;
+    .bgimg('../img/address.png',10px,center,15px,15px);
 }
 .icontel{
     .bgimg('../img/tel.png',10px,center,20px,20px);
@@ -487,12 +494,41 @@ footer{
 .iconye{
     .bgimg('../img/ye.png',0px,center,auto,30px);
 }
+.iconset{
+    .bgimg('../img/set.png',10px,center,25px,25px);
+}
+.iconjifen{
+    .bgimg('../img/jifen.png',10px,center,25px,25px);
+}
+.iconzuan{
+    .bgimg('../img/zuan.png',10px,center,25px,25px);
+}
+.iconbank{
+    .bgimg('../img/bank.png',10px,center,25px,25px);
+}
+.iconrate{
+    .bgimg('../img/rate.png',10px,center,25px,25px);
+}
+.iconfwg{
+    padding-left: 36px;
+    .bgimg('../img/fwg.png',10px,center,16px,16px);
+}
 .iconkeep{
-    .bgimg('../img/keep.png',10px,center,25px,30px);
+    .bgimg('../img/keep.png',10px,center,25px,25px);
+}
+.iconzaoc{
+    .bgimg('../img/zaoc.png',10px,center,25px,25px);
+}
+.icontonc{
+    .bgimg('../img/tonc.png',10px,center,25px,25px);
 }
 .right{
     padding: 25px 15px;
     .bgimg('../img/right.png',0px,center,10px,20px);
+}
+.rightb{
+    padding: 40px 15px;
+    .bgimg('../img/rightb.png',0px,center,10px,15px);
 }
 .iconcancel{
     padding: 5px 10px 5px 30px;
@@ -502,6 +538,13 @@ footer{
 }
 .iconlu{
     .bgimg('../img/iconlu.png',0px,center,8px,8px);
+}
+.iconmsg{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 10px;
+    .bgimg('../img/msg.png',0px,0px,20px,20px);
 }
 .check{
     .bgimg('../img/check.png',20px,center,20px,20px);
@@ -738,19 +781,14 @@ footer{
 }
 //店铺导航
 .shopbar{
-    margin-top: 50px;
     .lh(40px);
     .bgb;
     .disf;
     .textcen;
     div{
-        width: 25%;
-        &:nth-child(2){
-            margin: 0px 12.5%;
-        }
         &.on{
-            .colz;
-            border-bottom:2px solid rgb(@r,@g,@b);
+            .colr;
+            border-bottom:2px solid #F5092C;
         }
     }
 }
@@ -789,14 +827,11 @@ footer{
 //个人中心页
 .selftop{
     background-size: 100% 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    > div{
-       width: 80px;
-       border-radius: 40px;
+    .selftext{
+       padding-top: 80px;
        img{
-           width: 100%;
+           width: 80px;
+           border-radius: 50%;
        }
        span{
            .colb;
@@ -804,13 +839,6 @@ footer{
            text-align: center;
        }
     }
-}
-.iconset{
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    padding: 10px;
-    .bgimg('../img/set.png',0px,0px,20px,20px);
 }
 //评价
 .xingout{
@@ -887,6 +915,9 @@ footer{
             }
         }
     }
+    .grate{
+        border-bottom: 1px solid #E1E1E1;
+    }
 }
 //商家信息
 .loadshop{
@@ -919,12 +950,15 @@ footer{
         .fs(24px);
     }
     .level img{
-//      margin-top: 5px;
         width: 15px;
     }
     .otime{
         .fs(12px);
     }
+}
+.levelt img{
+    margin-top: 5px;
+    width: 15px;
 }
 .ordaddress{
     .bgb;
@@ -987,41 +1021,30 @@ footer{
     }
 }
 .hotel{
-    height: 120px;
+    height: 80px;
     .bgb;
     .hotellevel{
         .fr;
-        width: 100px;
-        margin-top: 20px;
-        height: 80px;
+        width: 80px;
+        height: 60px;
+        margin-top: 10px;
         border-left: 1px solid #D8D8D8;
+        .bgimg('../img/addtel.png',center,center,30px,30px);
     }
-}
-.hotelinfo{
-    padding: 0px 110px 0px 20px;
-    .fs(12px);
-    line-height: 20px;
-    >div{
-      .texovh;  
-    }
-    .hotelname{
-        .lh(40px);
-        .fs(16px);
-    }
-    .hotelfuwu{
-        span{
-            margin-right: 10px;
-            margin-top: 10px;
-            padding: 10px;
+    .hotelinfo{
+        div{
+            max-height: 60px;
         }
+        padding: 10px 0px 10px 20px;
+        .fs(14px);
+        line-height: 20px;
     }
 }
-//入住时间
+
 .intime{
-    margin: 20px;
-    height: 60px;
     background: url('../img/vline.png') center center no-repeat #fff;
-    background-size: 1px 25px;
+    background-size: 1px 35px;
+    padding: 12px 0px;
     .textcen;
     line-height: 30px;
     > div{
@@ -1058,26 +1081,24 @@ footer{
     }          
 }
 .order{
-    .fs(12px);
     > div{
-       padding: 0px 10px; 
+        
        .texovh;
     }
     .oname{
         .lh(40px);
     }
     .oinfo{
-        padding: 10px 10px; 
-        border-bottom: 1px solid #D8D8D8;
-        border-top: 1px solid #D8D8D8;
+        background: #fafafa;
+        padding: 10px 10px;
         img{
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
         }
     }
     .ginfo{
         line-height: 30px;
-        padding: 10px 0px 10px 100px;
+        padding-left: 80px;
     }
     .btnarea{
         height: 50px;
@@ -1141,4 +1162,52 @@ footer{
             }
         }
     }
+}
+//积分商城
+.jftopimg{
+    img{
+        width: 100%;
+    }
+}
+.jfgood{
+    width: 32%;
+    .fl;
+    img{
+        width: 100%;
+    }
+    &:nth-child(2){
+        margin: 0px 2%;
+    }
+}
+.jfgoods{
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: wrap;
+    > div{
+        width: 50%;
+        .jfimgbag{
+            padding-right: 50px;
+            img{
+                width: 100%;
+            }
+        }
+        &:nth-child(2n+1){
+            border-right: 1px solid #E0E0E0;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        &:nth-child(2n){
+            border-bottom: 1px solid #E0E0E0;
+        }
+    }
+}
+//兑换按钮
+.jfbtn{
+    bottom: 5px;
+    right: 5px;
+}
+//订单确认小头像
+.smallimg img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
 }

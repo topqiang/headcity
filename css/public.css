@@ -144,3 +144,13 @@ a:active {star:expression(this.onFocus=this.blur());}
 .borad4{
 	border-radius: 4px;
 }
+.slider div.desc{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	background: rgba(0,0,0,0.4);
+	line-height: 20px;
+	color: #fff;
+	padding: 10px;
+	height: 100px;
+}

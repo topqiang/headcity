@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>易点到家</title>
+        <title>订单</title>
         <!-- Sets initial viewport load and disables zooming  -->
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
         <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
@@ -16,14 +16,44 @@
         </style>
     </head>
     <body>
-    	<header class="bgz">
-    		<div class="left">我的订单</div>
+    	<header class="bgz colb">
+    		订单
     	</header>
 		<div class="content" style="padding-top: 50px;">
-		  	<div class="order mat10 bgb ovhid pad0-10">
+			
+			<div class="shopbar">
+		   		<div>全部</div>
+		   		<div class="on">待付款</div>
+		   		<div>待取货</div>
+		   		<div>待评价</div>
+		   		<div>已完成</div>
+		   	</div>
+			
+		  	<div class="order mat10 bgb ovhid">
 		  		<div class="oname">
-		  			<span class="fr">待付款</span>
-		  			<span>汨罗阳光西餐厅</span>
+		  			<span class="fr colr mar10">待付款</span>
+		  			<span class="pad0-20 bol5">掌上金城第一取货点</span>
+		  		</div>
+		  		<div class="oinfo ovhid">
+		  			<div class="fl">
+		  				<img src="../img/hotel.png" />
+		  			</div>
+		  			<div class="ginfo">
+		  				<div class="">健康荷包蛋</div>
+		  				<div class="fs16">
+		  					<span class="cole fr">X1</span>
+		  					<span class="colr">￥69</span>
+		  				</div>
+		  			</div>
+		  		</div>
+		  		<div class="oinfo ovhid">
+		  			<div class="fl">
+		  				<img src="../img/hotel.png" />
+		  			</div>
+		  			<div class="ginfo">
+		  				<div class="colz fs24">￥69</div>
+		  				<div class="fs12">下单时间：2016.08.29 12:00</div>
+		  			</div>
 		  		</div>
 		  		<div class="oinfo ovhid">
 		  			<div class="fl">
@@ -35,7 +65,7 @@
 		  			</div>
 		  		</div>
 		  		<div class="btnarea">
-		  			<span class="colz borbtn fr mat10">立即付款</span>
+		  			<span class="borbtnh fr mat10 fs12">立即付款</span>
 		  		</div>
 		  	</div>
 		  	
@@ -54,7 +84,7 @@
 		  			</div>
 		  		</div>
 		  		<div class="btnarea">
-		  			<span class="colz borbtn fr mat10">立即付款</span>
+		  			<span class="colz borbtnh fr mat10">立即付款</span>
 		  		</div>
 		  	</div>
 		  	
@@ -73,7 +103,7 @@
 		  			</div>
 		  		</div>
 		  		<div class="btnarea">
-		  			<span class="colz borbtn fr mat10">立即付款</span>
+		  			<span class="colz borbtnh fr mat10">立即付款</span>
 		  		</div>
 		  	</div>
 		  	
@@ -92,21 +122,10 @@
 		  			</div>
 		  		</div>
 		  		<div class="btnarea">
-		  			<span class="colz borbtn fr mat10">立即付款</span>
+		  			<span class="colz borbtnh fr mat10">立即付款</span>
 		  		</div>
 		  	</div>
 		</div>
-		<footer>
-			<div>
-	   			<span>首页</span>
-	   		</div>
-	   		<div class="on">
-	   			<span>订单</span>
-	   		</div>
-	   		<div>
-	   			<span>我的</span>
-	   		</div>
-		</footer>
     </body>
 	<script type="text/javascript" src="../js/touch.min.js"></script>
 </html>

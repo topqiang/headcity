@@ -19,7 +19,7 @@ body {
   background: #f9d726;
 }
 .bgbtn {
-  background: #4ad67a;
+  background: #4ad67a !important;
 }
 .colz {
   color: #f9d726;
@@ -90,6 +90,12 @@ body {
   padding: 5px 20px;
   border-radius: 4px;
   border: 1px solid #ef6353;
+}
+.borbtnh {
+  color: #333;
+  padding: 5px 20px;
+  border-radius: 4px;
+  border: 1px solid #333;
 }
 .botarea {
   height: 50px;
@@ -441,7 +447,7 @@ footer > div span {
 }
 .iconmoney {
   background: url('../img/money.png') 10px center no-repeat transparent;
-  background-size: 25px 30px;
+  background-size: 25px 25px;
 }
 .icontix {
   background: url('../img/tix.png') 10px center no-repeat transparent;
@@ -464,8 +470,8 @@ footer > div span {
   background-size: 20px 20px;
 }
 .iconaddr {
-  padding-right: 15px;
-  background: url('../img/addre.png') right center no-repeat transparent;
+  padding-left: 35px;
+  background: url('../img/address.png') 10px center no-repeat transparent;
   background-size: 15px 15px;
 }
 .icontel {
@@ -518,14 +524,52 @@ footer > div span {
   background: url('../img/ye.png') 0px center no-repeat transparent;
   background-size: auto 30px;
 }
+.iconset {
+  background: url('../img/set.png') 10px center no-repeat transparent;
+  background-size: 25px 25px;
+}
+.iconjifen {
+  background: url('../img/jifen.png') 10px center no-repeat transparent;
+  background-size: 25px 25px;
+}
+.iconzuan {
+  background: url('../img/zuan.png') 10px center no-repeat transparent;
+  background-size: 25px 25px;
+}
+.iconbank {
+  background: url('../img/bank.png') 10px center no-repeat transparent;
+  background-size: 25px 25px;
+}
+.iconrate {
+  background: url('../img/rate.png') 10px center no-repeat transparent;
+  background-size: 25px 25px;
+}
+.iconfwg {
+  padding-left: 36px;
+  background: url('../img/fwg.png') 10px center no-repeat transparent;
+  background-size: 16px 16px;
+}
 .iconkeep {
   background: url('../img/keep.png') 10px center no-repeat transparent;
-  background-size: 25px 30px;
+  background-size: 25px 25px;
+}
+.iconzaoc {
+  background: url('../img/zaoc.png') 10px center no-repeat transparent;
+  background-size: 25px 25px;
+}
+.icontonc {
+  background: url('../img/tonc.png') 10px center no-repeat transparent;
+  background-size: 25px 25px;
 }
 .right {
   padding: 25px 15px;
   background: url('../img/right.png') 0px center no-repeat transparent;
   background-size: 10px 20px;
+}
+.rightb {
+  padding: 40px 15px;
+  background: url('../img/rightb.png') 0px center no-repeat transparent;
+  background-size: 10px 15px;
 }
 .iconcancel {
   padding: 5px 10px 5px 30px;
@@ -537,6 +581,14 @@ footer > div span {
 .iconlu {
   background: url('../img/iconlu.png') 0px center no-repeat transparent;
   background-size: 8px 8px;
+}
+.iconmsg {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 10px;
+  background: url('../img/msg.png') 0px 0px no-repeat transparent;
+  background-size: 20px 20px;
 }
 .check {
   background: url('../img/check.png') 20px center no-repeat transparent;
@@ -826,7 +878,6 @@ footer > div span {
   flex-flow: wrap;
 }
 .shopbar {
-  margin-top: 50px;
   height: 40px;
   line-height: 40px;
   background: #fff !important;
@@ -835,15 +886,9 @@ footer > div span {
   flex-flow: wrap;
   text-align: center;
 }
-.shopbar div {
-  width: 25%;
-}
-.shopbar div:nth-child(2) {
-  margin: 0px 12.5%;
-}
 .shopbar div.on {
-  color: #f9d726;
-  border-bottom: 2px solid #f9d726;
+  color: #F5092C;
+  border-bottom: 2px solid #F5092C;
 }
 .tab {
   overflow: hidden;
@@ -879,29 +924,18 @@ footer > div span {
 }
 .selftop {
   background-size: 100% 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.selftop > div {
+.selftop .selftext {
+  padding-top: 80px;
+}
+.selftop .selftext img {
   width: 80px;
-  border-radius: 40px;
+  border-radius: 50%;
 }
-.selftop > div img {
-  width: 100%;
-}
-.selftop > div span {
+.selftop .selftext span {
   color: #FFFFFF !important;
   display: block;
   text-align: center;
-}
-.iconset {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  padding: 10px;
-  background: url('../img/set.png') 0px 0px no-repeat transparent;
-  background-size: 20px 20px;
 }
 .xingout {
   padding: 10px;
@@ -984,6 +1018,9 @@ footer > div span {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.ratelist .grate {
+  border-bottom: 1px solid #E1E1E1;
+}
 .loadshop {
   background-size: 100% 100%;
 }
@@ -1021,6 +1058,10 @@ footer > div span {
 }
 .manna .otime {
   font-size: 12px;
+}
+.levelt img {
+  margin-top: 5px;
+  width: 15px;
 }
 .ordaddress {
   background: #fff !important;
@@ -1090,41 +1131,30 @@ footer > div span {
   background-size: 20px 20px;
 }
 .hotel {
-  height: 120px;
+  height: 80px;
   background: #fff !important;
 }
 .hotel .hotellevel {
   float: right;
-  width: 100px;
-  margin-top: 20px;
-  height: 80px;
+  width: 80px;
+  height: 60px;
+  margin-top: 10px;
   border-left: 1px solid #D8D8D8;
+  background: url('../img/addtel.png') center center no-repeat transparent;
+  background-size: 30px 30px;
 }
-.hotelinfo {
-  padding: 0px 110px 0px 20px;
-  font-size: 12px;
+.hotel .hotelinfo {
+  padding: 10px 0px 10px 20px;
+  font-size: 14px;
   line-height: 20px;
 }
-.hotelinfo > div {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.hotelinfo .hotelname {
-  height: 40px;
-  line-height: 40px;
-  font-size: 16px;
-}
-.hotelinfo .hotelfuwu span {
-  margin-right: 10px;
-  margin-top: 10px;
-  padding: 10px;
+.hotel .hotelinfo div {
+  max-height: 60px;
 }
 .intime {
-  margin: 20px;
-  height: 60px;
   background: url('../img/vline.png') center center no-repeat #ffffff;
-  background-size: 1px 25px;
+  background-size: 1px 35px;
+  padding: 12px 0px;
   text-align: center;
   line-height: 30px;
 }
@@ -1161,11 +1191,7 @@ footer > div span {
   padding-left: 10px;
   border-left: 1px solid #D8D8D8;
 }
-.order {
-  font-size: 12px;
-}
 .order > div {
-  padding: 0px 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1175,17 +1201,16 @@ footer > div span {
   line-height: 40px;
 }
 .order .oinfo {
+  background: #fafafa;
   padding: 10px 10px;
-  border-bottom: 1px solid #D8D8D8;
-  border-top: 1px solid #D8D8D8;
 }
 .order .oinfo img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 }
 .order .ginfo {
   line-height: 30px;
-  padding: 10px 0px 10px 100px;
+  padding-left: 80px;
 }
 .order .btnarea {
   height: 50px;
@@ -1251,4 +1276,47 @@ footer > div span {
 .hotkey li span:nth-child(2) {
   border-left: 1px solid #D2D2D2;
   border-right: 1px solid #D2D2D2;
+}
+.jftopimg img {
+  width: 100%;
+}
+.jfgood {
+  width: 32%;
+  float: left;
+}
+.jfgood img {
+  width: 100%;
+}
+.jfgood:nth-child(2) {
+  margin: 0px 2%;
+}
+.jfgoods {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: wrap;
+}
+.jfgoods > div {
+  width: 50%;
+}
+.jfgoods > div .jfimgbag {
+  padding-right: 50px;
+}
+.jfgoods > div .jfimgbag img {
+  width: 100%;
+}
+.jfgoods > div:nth-child(2n+1) {
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+.jfgoods > div:nth-child(2n) {
+  border-bottom: 1px solid #E0E0E0;
+}
+.jfbtn {
+  bottom: 5px;
+  right: 5px;
+}
+.smallimg img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
 }
