@@ -83,10 +83,13 @@ body{
     color: #42bdcc;
 }
 .colr{
-    color: #F5092C;
+    color: #F5092C !important;
+}
+.bgr{
+   background: #F5092C !important;
 }
 .disn{
-    display: none;
+    display: none !important;
 }
 .ovhid{
     overflow: hidden;
@@ -302,7 +305,7 @@ footer{
 }
 .smbtn{
     padding: 2px 5px;
-    .colb;
+    color: #fff;
     .bgz;
     border-radius: 5px;
 }
@@ -538,6 +541,20 @@ footer{
 }
 .iconlu{
     .bgimg('../img/iconlu.png',0px,center,8px,8px);
+}
+.iconoinfo{
+    padding-left: 50px;
+    .bgimg('../img/oinfo.png',15px,center,20px,20px);
+}
+.iconotime{
+    padding-left: 50px;
+    .bgimg('../img/otime.png',15px,center,20px,20px);
+}
+.iconclose{
+    padding: 10px;
+    top: -10px;
+    right: -10px;
+    .bgimg('../img/close.png',center,center,20px,20px)
 }
 .iconmsg{
     position: absolute;
@@ -846,7 +863,7 @@ footer{
     margin-right: 10px;
     .bgimg('../img/xingout.png',center,center,20px,20px);
     &.on{
-        .bgimg('../img/xingon.png',center,center,20px,20px);
+        .bgimg('../img/xing.png',center,center,20px,20px);
     }
 }
 .ratecon{
@@ -1020,6 +1037,7 @@ footer{
         }
     }
 }
+
 .hotel{
     height: 80px;
     .bgb;
@@ -1031,14 +1049,15 @@ footer{
         border-left: 1px solid #D8D8D8;
         .bgimg('../img/addtel.png',center,center,30px,30px);
     }
-    .hotelinfo{
-        div{
-            max-height: 60px;
-        }
-        padding: 10px 0px 10px 20px;
-        .fs(14px);
-        line-height: 20px;
+}
+
+.hotelinfo{
+    div{
+        max-height: 60px;
     }
+    padding: 10px 0px 10px 20px;
+    .fs(14px);
+    line-height: 20px;
 }
 
 .intime{
@@ -1098,7 +1117,7 @@ footer{
     }
     .ginfo{
         line-height: 30px;
-        padding-left: 80px;
+        padding-left: 70px;
     }
     .btnarea{
         height: 50px;
@@ -1210,4 +1229,30 @@ footer{
     width: 40px;
     height: 40px;
     border-radius: 20px;
+}
+//评价列表商品，评价信息
+.ratebag{
+    .gimg{
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    textarea{
+        height: 60px;
+    }
+}
+.upimg{
+    div{
+        .fl;
+        width: 20%;
+        margin-right: 5%;
+        margin-bottom: 10px;
+        img{
+            width: 100%;
+        }
+    }
 }

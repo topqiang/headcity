@@ -28,6 +28,7 @@
 		   	</div>
 		   	
 		   	<div class="goods mat10">
+		   		<!--美味早餐-->
 		   		<div class="good">
 		   			<div class="imgbag">
 		   				<img src="../img/hotel.png"/>
@@ -51,10 +52,9 @@
 		   				</div>
 		   			</div>
 		   		</div>
-		   		
+		   		<!--同城商家-->
 		   		<div class="good">
 		   			<div class="imgbag">
-		   				
 		   				<img src="../img/hotel.png"/>
 		   			</div>
 		   			<div class="goodinfo">
@@ -75,7 +75,7 @@
 		   				</div>
 		   			</div>
 		   		</div>
-		   		
+		   		<!--同城服务-->
 		   		<div class="good">
 		   			<div class="imgbag">
 		   				<img src="../img/hotel.png"/>
@@ -85,17 +85,15 @@
 		   					<div class="sales">800总销量</div>
 		   					早餐
 		   				</div>
-		   				<div class="">
-		   					200元现金卷
-		   				</div>
 		   				<div class="descrip cole">
-		   					口味清淡，专业营养师搭配的西式早餐，精神一上午
+		   					周一至周日 |部分商品可用 |可叠加
 		   				</div>
 		   				<div class="payinfo">
-		   					<div class="fr borbtn lh14 colz mar5">取消关注</div>
-		   					
 		   					<font class="fs16 colr">￥8.00</font>
 		   					<font class="fs12 cole">门市价：￥500.00</font>
+		   				</div>
+		   				<div class="">
+		   					<div class="fr borbtn lh14 colz mar5">取消关注</div>
 		   				</div>
 		   			</div>
 		   		</div>
@@ -104,4 +102,9 @@
 		</div>
     </body>
 	<script type="text/javascript" src="../js/touch.min.js"></script>
+	<script type="text/javascript">
+		$(".good").on('swipeleft',function(){
+			console.log("滑动");
+		});
+	</script>
 </html>

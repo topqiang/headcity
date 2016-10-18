@@ -11,16 +11,13 @@ one mobile phone in city
 早餐列表	goodlist.html		√
 搜索结果列表	ssresult.html		√
 首页		index.html			√
-客服信息	kefu.html
-商品订单详情	orderinfo.html
-订单列表	orderlist.html
-订单支付方式	payorder.html
-评价		rate.html
+客服信息	kefu.html			
+订单支付方式	payorder.html		
 注册		register.html		√
 忘记密码	resetpwd.html		√
-确认订单	setorder.html		√
-店铺页		shop.html
-店铺详情	shopinfo.html
+早餐确认订单	setorder.html		√
+店铺页		shop.html			
+店铺详情	shopinfo.html		
 同城服务列表	shoplist.html		√
 登陆页面	login.html			√
 关键词搜索	sousuo.html			√
@@ -34,7 +31,7 @@ one mobile phone in city
 结果页面	result.html			√
 银行卡列表	bankcard.html		√
 修改密码	updpwd.html			√
-验证身份	checkinfo.html		√
+换绑身份	checkinfo.html		√
 个人信息	selfinfo.html		√
 
 
@@ -49,3 +46,10 @@ one mobile phone in city
 服务评价列表	gratelist.html		√
 服务订单确认	fuwuorder.html		√
 订单列表入口	order.html			√
+
+早餐订单列表	orderlist.html		√
+服务订单列表	orderlist2.html		√
+商品订单详情	orderinfo.html		√
+评价		rate.html			√
+服务订单详情	orderinfo2.html		√
+系统消息详情	msginfo.html		√
