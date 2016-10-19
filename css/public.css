@@ -20,7 +20,7 @@ h2{display: inline;}
 i{font-style: normal;}
 body{background: #fff;}
 html,body{-webkit-text-size-adjust: 100%;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
-input{font-size: 14px !important;}
+
 /* 页面设置 */
   /* 取消a标签点击后的虚线框 */
 a {outline: none;}  
@@ -38,6 +38,9 @@ a:active {star:expression(this.onFocus=this.blur());}
 }
 .width{
 	width: 100%;
+}
+.ma20{
+	margin: 20px;
 }
 .pad0-20{
 	padding: 0px 20px !important;

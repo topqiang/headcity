@@ -7,27 +7,26 @@ function top_linkto(){
 	$("[linkto]").on('click',function(){
 		var self = $(this);
 		var url = $.trim(self.attr("linkto"));
-		console.log(getRootPath());
 		if( url == ""){
 			return;
 		}
-		if( url.valueOf(".") != -1 &&  url.valueOf("www") != -1 && url.valueOf("http://") != 1){
-			url = "http://"+url;
+		//匹配全路径跳转
+		if( url.indexOf("http://") == 0 || url.indexOf("https://") == 0 ){
+			window.location.href = url;
+		}else if( url.indexOf("/") == 0 ){
+			//匹配
+			var hostname = getRootPath();
+			url = hostname + url;
+			window.location.href = url;
 		}
-//		window.location.href = "";
 	});
 }
 
-
 function getRootPath(){
-    //获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jsp
     var curWwwPath=window.document.location.href;
-    //获取主机地址之后的目录，如： uimcardprj/share/meun.jsp
     var pathName=window.document.location.pathname;
     var pos=curWwwPath.indexOf(pathName);
-    //获取主机地址，如： http://localhost:8083
     var localhostPaht=curWwwPath.substring(0,pos);
-    //获取带"/"的项目名，如：/uimcardprj
     var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
     return(localhostPaht+projectName);
 }
