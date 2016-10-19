@@ -18,7 +18,8 @@
     </head>
     <body>
     	<header class="bgza">
-    		<span class="local fr"></span>
+    		<!-- 有消息    加入类样式	on -->
+    		<span class="local fr on"></span>
     		<div class="textcen sousuo" linkto="ssresult">
     			<span class="cole iconsousuo">搜索</span>
     		</div>
@@ -182,6 +183,7 @@
     </body>
 	<script type="text/javascript" src="../js/touch.min.js"></script>
     <script type="text/javascript">
-		$(".slider").yxMobileSlider({width:640,height:350,during:3000});
+    	var w = document.documentElement?document.documentElement.clientWidth:document.body.clientWidth;
+		$(".slider").yxMobileSlider({width:w,height:205,during:3000});
 	</script>
 </html>   

@@ -14,9 +14,14 @@ function top_linkto(){
 		if( url.indexOf("http://") == 0 || url.indexOf("https://") == 0 ){
 			window.location.href = url;
 		}else if( url.indexOf("/") == 0 ){
-			//匹配
+			//匹配   类似于Thinkphp类型的URL {:U('Index/index')} => /项目名/index.php/Index/index  
 			var hostname = getRootPath();
 			url = hostname + url;
+			window.location.href = url;
+		}else if( url.indexOf("./") == 0 || url.indexOf("/") == -1){
+			//匹配静态跳转，已经相对路径跳转。
+			var curUrl = window.location.href;
+			url = curUrl.substr(0,curUrl.lastIndexOf("/")+1) + url;
 			window.location.href = url;
 		}
 	});
@@ -73,8 +78,8 @@ function top_rate(){
 function top_ingley(){
 	$(".gley .icongley").on('click',function(){
 		if($(this).parents('.gley').hasClass('on')){
-			$(".zhao").toggle();
-			$(".zhcon").slideToggle(100);
+			$(".zhao").toggleClass('disn');
+			$(".zhcon").toggleClass('disn');
 		}
 	});
 }

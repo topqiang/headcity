@@ -146,6 +146,9 @@ header{
     span.local{
         padding: 25px;
         .labelimg('../img/msg.png',@toph);
+        &.on{
+           .labelimg('../img/hasmsg.png',@toph);
+        }
     }
     .sousuo{
         width: 70%;
@@ -157,14 +160,16 @@ header{
     }
 }
 span.left{
-    .fl;
+    .poab;
+    left: 0px;
+    top: 0px;
     height: 50px;
     padding-left: 36px;
     .bgimg('../img/left.png',13px,center,10px,20px);
     &.hei{
         color: #000000;
         .textcen;
-        .bgimg('../img/lefth.png',13px,center,10px,20px);
+        .bgimg('../img/lefth.png',13px,center,15px,20px);
     }
 }
 .label{
@@ -979,6 +984,7 @@ footer{
 }
 .ordaddress{
     .bgb;
+    border-top-width: 0px;
     height: 80px;
     border-image:url('../img/borimg.png')15 repeat;
 }
