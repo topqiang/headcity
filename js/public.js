@@ -18,6 +18,10 @@ function top_linkto(){
 			var hostname = getRootPath();
 			url = hostname + url;
 			window.location.href = url;
+		}else if( url.indexOf("javascript:") == 0){
+			var start = url.indexOf(":");
+			var str = url.substring(start+1);
+			eval(str);
 		}else if( url.indexOf("./") == 0 || url.indexOf("/") == -1){
 			//匹配静态跳转，已经相对路径跳转。
 			var curUrl = window.location.href;
@@ -26,7 +30,6 @@ function top_linkto(){
 		}
 	});
 }
-
 function getRootPath(){
     var curWwwPath=window.document.location.href;
     var pathName=window.document.location.pathname;
