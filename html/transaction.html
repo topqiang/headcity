@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>易点到家</title>
+        <title>掌上金城</title>
         <!-- Sets initial viewport load and disables zooming  -->
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
         <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
@@ -21,58 +21,154 @@
     		收支明细
     	</header>
 		<div class="content" style="padding-top: 60px;">
-			<div class="pad0-10 lh25 borb31 bgb">
-				<div class="">
-					<span class="fr colr">+10.20</span>
-					<span>支付宝</span>
+			<div class="zhangdanlist">
+				<div class="pad0-10 lh25 borb31 bgb zhangdan">
+					<div class="">
+						<span class="fr colr">+10.20</span>
+						<span>支付宝</span>
+					</div>
+					<div class="fs12">
+						<span>提现成功</span>
+					</div>
+					<div class="cole fs12">
+						<span>2016-10-20 10:20</span>
+					</div>
 				</div>
-				<div class="fs12">
-					<span>提现成功</span>
+				
+				<div class="pad0-10 lh30 borb31 bgb zhangdan">
+					<div class="">
+						<span class="fr colr">+10.20</span>
+						<span>支付宝</span>
+					</div>
+					<div class="fs12">
+						<span>提现成功</span>
+					</div>
+					<div class="cole fs12">
+						<span>2016-10-20 10:20</span>
+					</div>
 				</div>
-				<div class="cole fs12">
-					<span>2016-10-20 10:20</span>
+				
+				<div class="pad0-10 lh30 borb31 bgb zhangdan">
+					<div class="">
+						<span class="fr colr">+10.20</span>
+						<span>支付宝</span>
+					</div>
+					<div class="fs12">
+						<span>提现成功</span>
+					</div>
+					<div class="cole fs12">
+						<span>2016-10-20 10:20</span>
+					</div>
+				</div>
+				
+				<div class="pad0-10 lh30 borb31 bgb zhangdan">
+					<div class="">
+						<span class="fr">-10.20</span>
+						<span>支付宝</span>
+					</div>
+					<div class="fs12">
+						<span>提现成功</span>
+					</div>
+					<div class="cole fs12">
+						<span>2016-10-20 10:20</span>
+					</div>
+				</div>
+				<div class="pad0-10 lh30 borb31 bgb zhangdan">
+					<div class="">
+						<span class="fr">-10.20</span>
+						<span>支付宝</span>
+					</div>
+					<div class="fs12">
+						<span>提现成功</span>
+					</div>
+					<div class="cole fs12">
+						<span>2016-10-20 10:20</span>
+					</div>
+				</div>
+				<div class="pad0-10 lh30 borb31 bgb zhangdan">
+					<div class="">
+						<span class="fr">-10.20</span>
+						<span>支付宝</span>
+					</div>
+					<div class="fs12">
+						<span>提现成功</span>
+					</div>
+					<div class="cole fs12">
+						<span>2016-10-20 10:20</span>
+					</div>
+				</div>
+				<div class="pad0-10 lh30 borb31 bgb zhangdan">
+					<div class="">
+						<span class="fr">-10.20</span>
+						<span>支付宝</span>
+					</div>
+					<div class="fs12">
+						<span>提现成功</span>
+					</div>
+					<div class="cole fs12">
+						<span>2016-10-20 10:20</span>
+					</div>
+				</div>
+				<div class="pad0-10 lh30 borb31 bgb zhangdan">
+					<div class="">
+						<span class="fr">-10.20</span>
+						<span>支付宝</span>
+					</div>
+					<div class="fs12">
+						<span>提现成功</span>
+					</div>
+					<div class="cole fs12">
+						<span>2016-10-20 10:20</span>
+					</div>
 				</div>
 			</div>
 			
-			<div class="pad0-10 lh30 borb31 bgb">
-				<div class="">
-					<span class="fr colr">+10.20</span>
-					<span>支付宝</span>
-				</div>
-				<div class="fs12">
-					<span>提现成功</span>
-				</div>
-				<div class="cole fs12">
-					<span>2016-10-20 10:20</span>
-				</div>
-			</div>
-			
-			<div class="pad0-10 lh30 borb31 bgb">
-				<div class="">
-					<span class="fr colr">+10.20</span>
-					<span>支付宝</span>
-				</div>
-				<div class="fs12">
-					<span>提现成功</span>
-				</div>
-				<div class="cole fs12">
-					<span>2016-10-20 10:20</span>
-				</div>
-			</div>
-			
-			<div class="pad0-10 lh30 borb31 bgb">
-				<div class="">
-					<span class="fr">-10.20</span>
-					<span>支付宝</span>
-				</div>
-				<div class="fs12">
-					<span>提现成功</span>
-				</div>
-				<div class="cole fs12">
-					<span>2016-10-20 10:20</span>
-				</div>
-			</div>
 		</div>
     </body>
 	<script type="text/javascript" src="../js/touch.min.js"></script>
+	<script type="text/javascript">
+	var flag= true;//防止ajax请求期间，对此触发请求数据
+	var $_zd = $(".zhangdan").height();//获取每个单项的高度
+	var length = 3;//定义预加载的数量，提前三个加载数据
+	var $_par = $(".zhangdanlist");//获取包裹容器
+	var winheight = $(window).height();//获取窗口高度
+	var curpage = 1;//存储当前的页数
+		$(function(){	
+			$(window).on("scroll",function(e){
+				if(flag){
+					var self = $(this);
+					var scrtop = self.scrollTop() + winheight;
+					var docheight = $_par.height();
+					console.log(scrtop + "=" + docheight + "=" + $_zd);
+					if(scrtop > docheight - ( length * $_zd ) ){
+						flag = false;
+						//ajax请求数据
+						getJson();
+					}
+				}
+			});
+		});
+		function getJson(data){
+			var datajson = ["","","","","",""];
+			if(!datajson || datajson.length == 0){
+				$(".content").append('<div class="textcen">没有更多了！</div>');
+			}else{
+				for(var key in datajson){
+//					var curobj = datajson[key];
+					var str = '<div class="">'
+								+'<span class="fr">-10.20</span>'
+								+'<span>支付宝</span>'
+							+'</div>'
+							+'<div class="fs12">'
+								+'<span>提现成功</span>'
+							+'</div>'
+							+'<div class="cole fs12">'
+								+'<span>2016-10-20 10:20</span>'
+							+'</div>';
+					$("<div/>",{"class" : "pad0-10 lh30 borb31 bgb zhangdan"}).html(str).appendTo($_par);
+				}
+				flag =true;
+			}
+		}
+	</script>
 </html>   

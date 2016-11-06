@@ -95,9 +95,10 @@ function top_select(){
 	$("select.selpstime").on('change',function(){
 		var self = $(this);
 		var elename = self.attr("forele");
+		var text = self.find("option[value="+self.val()+"]").text();
 		if($.trim(elename) != ""){
 			var ele = self.parent().find("[ele="+elename+"]");
-			ele.text(self.val());
+			ele.text(text);
 		}
 	});
 }
